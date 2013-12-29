@@ -1,0 +1,46 @@
+// .modal {
+//         display: none;
+//         position: fixed;
+//         width: 100%;
+//         height: 100%;
+//         top: 0;
+//         left: 0;
+//         z-index: 100;
+
+//         .overlay {
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0;
+//                 width: 100%;
+//                 height: 100%;
+//                 background-color: rgba(255, 255, 255, .94);
+
+//                 @include transition(opacity 200ms ease-out);
+//                 @include opacity(0);
+//         }
+
+//         .inner {
+//                 position: absolute;
+//                 left: 50%;
+//                 margin-left: -460px;
+//                 margin-top: 180px;
+
+//                 @include transition(all 500ms ease-out);
+//                 // @include translateY(-100%);
+//                 @include opacity(0);
+//         }
+
+// //Set modal to display: block
+// &.on { display: block; }
+
+// //The on settings (animations and more)
+// &.reveal {
+//         .inner {
+//                 // @include translateY(0);
+//                 @include opacity(1);
+//         }
+
+//         .overlay { @include opacity(1); }
+// }
+
+// }

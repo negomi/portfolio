@@ -1,0 +1,153 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/layout/sticky-footer";
+@import "compass/layout/stretching";
+@import "normalize";
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "partials/modal";
+
+$dark-gray: #222;
+$mid-gray: #666;
+$light-gray: #eee;
+$green: #00ebbe;
+$primary-font: 'Changa One', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
+
+// Layout styles
+#nav{
+  list-style: none;
+  position: fixed;
+  right: 20px;
+  z-index: 200;
+  li {
+    margin: 0 0 15px 0;
+  }
+}
+
+#footer {
+  @extend .absolute-horizontal-center;
+  background-color: $dark-gray;
+  font-family: $secondary-font;
+  padding: 1%;
+  h3, p {
+    color: $mid-gray;
+  }
+}
+
+.absolute-horizontal-center {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+// Text styles
+h1, h2, h3, p, ul, li {
+  color: $dark-gray;
+}
+
+a {
+  color: $green;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Landing page styles
+#welcome {
+  background-color: $dark-gray;
+  background: url('../img/blackwall.jpg') no-repeat;
+  @include background-size(cover);
+  @include stretch;
+  header {
+    @extend .absolute-horizontal-center;
+    bottom: 5%;
+    .intro {
+      font-family: $primary-font;
+      h1 {
+        color: $mid-gray;
+        font-size: 4em;
+      }
+      h2 {
+        color: $light-gray;
+        font-size: 3em;
+      }
+    }
+    #down-btn {
+      margin-top: 8%;
+    }
+  }
+}
+
+// Work styles
+#work {
+  position: relative;
+  header {
+    background-color: $dark-gray;
+    padding: 1% 1% 2%;
+    color: $mid-gray;
+    font-family: $primary-font;
+    font-size: 6em;
+  }
+  section {
+    background-color: $light-gray;
+  }
+  .content {
+    @include outer-container;
+    font-family: $secondary-font;
+    padding: 2%;
+    h1 {
+      font-family: $primary-font;
+    }
+  }
+  #developer {
+    .project {
+      @include row;
+      padding: 1% 0;
+      .image {
+        @include span-columns(6);
+        img {
+          @include fill-parent;
+        }
+      }
+      .text {
+        @include span-columns(6);
+        line-height: 1.5em;
+      }
+    }
+  }
+  #creative {
+    .grid {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      img {
+        @include fill-parent;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  #technologist {
+    .image {
+      @include fill-parent;
+      @include span-columns(6);
+    }
+    .circle {
+      @include border-radius(150px);
+      background: url('../img/imogen.jpg') no-repeat;
+      margin: 2%;
+      height: 300px;
+      width: 300px;
+    }
+    .contact {
+      @include span-columns(4);
+      color: $dark-gray;
+      margin: 5%;
+      td {
+        padding: 5% 10% 5% 0;
+      }
+    }
+  }
+}
