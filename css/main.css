@@ -427,52 +427,52 @@ table {
   box-sizing: border-box;
 }
 
-/* line 19, sass/main.scss */
+/* line 2, sass/partials/_layout.scss */
 #nav {
   list-style: none;
   position: fixed;
   right: 20px;
   z-index: 200;
 }
-/* line 24, sass/main.scss */
+/* line 7, sass/partials/_layout.scss */
 #nav li {
   margin: 0 0 15px 0;
 }
 
-/* line 29, sass/main.scss */
+/* line 12, sass/partials/_layout.scss */
 #footer {
   background-color: #222222;
   font-family: "Open Sans", sans-serif;
   padding: 1%;
 }
-/* line 34, sass/main.scss */
+/* line 17, sass/partials/_layout.scss */
 #footer h3, #footer p {
   color: #666666;
 }
 
-/* line 39, sass/main.scss */
+/* line 22, sass/partials/_layout.scss */
 .absolute-horizontal-center, #footer, #welcome header {
   position: absolute;
   text-align: center;
   width: 100%;
 }
 
-/* line 46, sass/main.scss */
+/* line 2, sass/partials/_typography.scss */
 h1, h2, h3, p, ul, li {
   color: #222222;
 }
 
-/* line 50, sass/main.scss */
+/* line 6, sass/partials/_typography.scss */
 a {
   color: #00ebbe;
   text-decoration: none;
 }
-/* line 53, sass/main.scss */
+/* line 9, sass/partials/_typography.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 59, sass/main.scss */
+/* line 2, sass/partials/_welcome.scss */
 #welcome {
   background-color: #222222;
   background: url("../img/blackwall.jpg") no-repeat;
@@ -483,34 +483,34 @@ a:hover {
   left: 0;
   right: 0;
 }
-/* line 64, sass/main.scss */
+/* line 7, sass/partials/_welcome.scss */
 #welcome header {
   bottom: 5%;
 }
-/* line 67, sass/main.scss */
+/* line 10, sass/partials/_welcome.scss */
 #welcome header .intro {
   font-family: "Changa One", sans-serif;
 }
-/* line 69, sass/main.scss */
+/* line 12, sass/partials/_welcome.scss */
 #welcome header .intro h1 {
   color: #666666;
   font-size: 4em;
 }
-/* line 73, sass/main.scss */
+/* line 16, sass/partials/_welcome.scss */
 #welcome header .intro h2 {
   color: #eeeeee;
   font-size: 3em;
 }
-/* line 78, sass/main.scss */
+/* line 21, sass/partials/_welcome.scss */
 #welcome header #down-btn {
   margin-top: 8%;
 }
 
-/* line 85, sass/main.scss */
+/* line 2, sass/partials/_work.scss */
 #work {
   position: relative;
 }
-/* line 87, sass/main.scss */
+/* line 4, sass/partials/_work.scss */
 #work header {
   background-color: #222222;
   padding: 1% 1% 2%;
@@ -518,11 +518,11 @@ a:hover {
   font-family: "Changa One", sans-serif;
   font-size: 6em;
 }
-/* line 94, sass/main.scss */
+/* line 11, sass/partials/_work.scss */
 #work section {
   background-color: #eeeeee;
 }
-/* line 97, sass/main.scss */
+/* line 14, sass/partials/_work.scss */
 #work .content {
   *zoom: 1;
   max-width: 68em;
@@ -540,11 +540,11 @@ a:hover {
 #work .content:after {
   clear: both;
 }
-/* line 101, sass/main.scss */
+/* line 18, sass/partials/_work.scss */
 #work .content h1 {
   font-family: "Changa One", sans-serif;
 }
-/* line 106, sass/main.scss */
+/* line 23, sass/partials/_work.scss */
 #work #developer .project {
   *zoom: 1;
   display: block;
@@ -559,7 +559,7 @@ a:hover {
 #work #developer .project:after {
   clear: both;
 }
-/* line 109, sass/main.scss */
+/* line 26, sass/partials/_work.scss */
 #work #developer .project .image {
   float: left;
   display: block;
@@ -570,11 +570,11 @@ a:hover {
 #work #developer .project .image:last-child {
   margin-right: 0;
 }
-/* line 111, sass/main.scss */
+/* line 28, sass/partials/_work.scss */
 #work #developer .project .image img {
   width: 100%;
 }
-/* line 115, sass/main.scss */
+/* line 32, sass/partials/_work.scss */
 #work #developer .project .text {
   float: left;
   display: block;
@@ -586,18 +586,18 @@ a:hover {
 #work #developer .project .text:last-child {
   margin-right: 0;
 }
-/* line 122, sass/main.scss */
+/* line 39, sass/partials/_work.scss */
 #work #creative .grid {
   margin: 0;
   padding: 0;
   width: 100%;
 }
-/* line 126, sass/main.scss */
+/* line 43, sass/partials/_work.scss */
 #work #creative .grid img {
   width: 100%;
   margin-bottom: 10px;
 }
-/* line 133, sass/main.scss */
+/* line 50, sass/partials/_work.scss */
 #work #technologist .image {
   width: 100%;
   float: left;
@@ -609,7 +609,7 @@ a:hover {
 #work #technologist .image:last-child {
   margin-right: 0;
 }
-/* line 137, sass/main.scss */
+/* line 54, sass/partials/_work.scss */
 #work #technologist .circle {
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
@@ -617,24 +617,59 @@ a:hover {
   -o-border-radius: 150px;
   border-radius: 150px;
   background: url("../img/imogen.jpg") no-repeat;
-  margin: 2%;
+  float: right;
+  margin: 20px;
   height: 300px;
   width: 300px;
 }
-/* line 144, sass/main.scss */
+/* line 62, sass/partials/_work.scss */
 #work #technologist .contact {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
   color: #222222;
-  margin: 5%;
+  margin: 70px 20px 0;
 }
 /* line 40, sass/neat/grid/_span-columns.scss */
 #work #technologist .contact:last-child {
   margin-right: 0;
 }
-/* line 148, sass/main.scss */
+/* line 66, sass/partials/_work.scss */
 #work #technologist .contact td {
   padding: 5% 10% 5% 0;
+}
+
+/* line 1, sass/partials/_modal.scss */
+.modal {
+  display: none;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  background-color: #222222;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  padding: 2%;
+  position: fixed;
+  top: 5%;
+  left: 10%;
+  right: 10%;
+  z-index: 100;
+}
+/* line 11, sass/partials/_modal.scss */
+.modal .images, .modal .text {
+  text-align: center;
+}
+/* line 13, sass/partials/_modal.scss */
+.modal .images img, .modal .text img {
+  display: inline;
+  padding: 5px;
+  max-width: 30%;
+}
+/* line 18, sass/partials/_modal.scss */
+.modal .images p, .modal .text p {
+  color: #eeeeee;
+  padding: 5px;
 }
