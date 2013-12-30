@@ -643,12 +643,8 @@ a:hover {
 /* line 1, sass/partials/_modal.scss */
 .modal {
   display: none;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-  border-radius: 30px;
   background-color: #222222;
+  border: solid 1px black;
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
   padding: 2%;
