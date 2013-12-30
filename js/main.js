@@ -47,6 +47,25 @@ $(document).ready(function() {
         });
     }
 
+    // Open relevant modal on click
+    function handleModal() {
+        $('.grid').on('click', 'a', function (event) {
+            event.preventDefault();
+
+            var $activeModal = $(this).attr('href');
+            var $anyModal = $('.modal');
+
+            if (!($anyModal.is(':visible'))) {
+                $($activeModal).slideDown('fast', function() {
+                    $('.close').on('click', 'a', function (event) {
+                        event.preventDefault();
+                        $($activeModal).hide('fast');
+                    });
+                });
+            }
+        });
+    }
+
     // Masonry options
     $(function(){
         var $container = $('.grid');
@@ -62,8 +81,9 @@ $(document).ready(function() {
     repositionNav();
     sizeContent();
     smoothScroll();
+    handleModal();
 
-    // Recalculate nav and welcome every resize of window
+    // Recalculate nav and welcome on window resize
     $(window).resize(function() {
         repositionNav();
         sizeContent();

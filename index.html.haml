@@ -7,6 +7,8 @@
     %link{:rel => "stylesheet", :href => "css/main.css"}/
     %title Imogen Wentworth | portfolio
   %body
+
+    / Navigation
     %ul#nav
       %li
         %a{:href => "#welcome"}
@@ -21,6 +23,70 @@
         %a{:href => "#tech-heading"}
           %i#tech-btn.fa.fa-circle-o
 
+    / Modals
+    .modal#stork
+      .close
+        %a{:href => "/"}
+          %i.fa.fa-times.fa-3x
+      .images
+        %img{:src => "img/stork-cupcakes.png", :alt => "Stork cupcakes"}/
+        %img{:src => "img/stork-brownies.png", :alt => "Stork brownies"}/
+        %img{:src => "img/stork-sponge.png", :alt => "Stork sponge"}/
+      .text
+        %p Heritage print campaign for Stork margarine, spring/summer 2013
+    .modal#ikea
+      .close
+        %a{:href => "/"}
+          %i.fa.fa-times.fa-3x
+      .images
+        %img{:src => "img/ikea-email.png", :alt => "IKEA"}/
+      .text
+        %p Email to promote IKEA's BEST&Aring; range, a customisable modular storage system
+        %p
+          %a{:href => "", :target => "_blank"}
+            Read it
+            %i.fa.fa-arrow-right
+    .modal#virgin
+      .close
+        %a{:href => "/"}
+          %i.fa.fa-times.fa-3x
+      .images
+        %img{:src => "img/virgin-email.gif", :alt => "Virgin Holidays"}/
+      .text
+        %p Email campaign to persuade Londoners to escape the UK's wet weather with a last-minute break
+        %p
+          %a{:href => "", :target => "_blank"}
+            Read it
+            %i.fa.fa-arrow-right
+    .modal#coke
+      .close
+        %a{:href => "/"}
+          %i.fa.fa-times.fa-3x
+      .images
+        %img{:src => "img/coke-vanilla.jpg", :alt => "Coca-Cola vanilla"}/
+      .text
+        %p April Fool's Day press ad announcing the return of Coca-Cola vanilla after an 8-year break
+    .modal#revlon
+      .close
+        %a{:href => "/"}
+          %i.fa.fa-times.fa-3x
+      .images
+        %img{:src => "img/revlon-press.png", :alt => "Revlon"}/
+        %img{:src => "img/revlon-outdoor.png", :alt => "Revlon"}/
+      .text
+        %p Campaign tagline for the launch of Nearly Naked, Revlon's skintone-matching makeup range
+    .modal#accenture
+      .close
+        %a{:href => "/"}
+          %i.fa.fa-times.fa-3x
+      .images
+        %img{:src => "img/accenture-mobile.png", :alt => "Accenture"}/
+        %img{:src => "img/accenture-mobile2.png", :alt => "Accenture"}/
+        %img{:src => "img/accenture-mobile3.png", :alt => "Accenture"}/
+      .text
+        %p Microsite to help prospective employees get started in their Accenture career
+
+    / Landing page
     #welcome
       %header
         .intro
@@ -30,6 +96,7 @@
           %a{:href => "#work"}
             %i.fa.fa-chevron-circle-down.fa-5x.pulse
 
+    / Portfolio stuffs
     #work
       %header#dev-heading developer.
       %section#developer
@@ -42,7 +109,7 @@
               %h2
                 %a{:href => "http://wordnursery.herokuapp.com/"} WordNursery
               %h3 Rails | Sass | Compass | CoffeeScript | Foundation
-              %p A vocabulary builder - search for new words, learn their meaning, and store them till you know them. Uses the Wordnik API.
+              %p A vocabulary builder. Search for new words via the Wordnik API, learn their meaning, and store them till you know them.
           .project
             .image
               %img{:src => "img/hugbot.png", :alt => "hugbot"}/
@@ -75,41 +142,30 @@
                 %a{:href => "http://prettystocks.herokuapp.com/"} PrettyStocks
               %h3 HTML | CSS | Ruby | Sinatra
               %p A stock-finder tool that uses the YahooFinance Ruby module to display current data for any stock symbol.
+
       %header#cre-heading creative.
       %section#creative
         .content
           %h1 I used to write copy for print, digital, outdoor & retail campaigns.
           %ul.grid.js-masonry
             %li.item
-              %img{:src => "img/stork-brownies.png", :alt => "Accenture"}/
-              .overlayHolder
-                .overlay
-                .inner
+              %a{:href => "#stork"}
+                %img{:src => "img/stork-brownies.png", :alt => "Accenture"}/
             %li.item
-              %img{:src => "img/ikea-email.png", :alt => "IKEA"}/
-              .overlayHolder
-                .overlay
-                .inner
+              %a{:href => "#ikea"}
+                %img{:src => "img/ikea-email.png", :alt => "IKEA"}/
             %li.item
-              %img{:src => "img/virgin-email.png", :alt => "Virgin Holidays"}/
-              .overlayHolder
-                .overlay
-                .inner
+              %a{:href => "#virgin"}
+                %img{:src => "img/virgin-email.png", :alt => "Virgin Holidays"}/
             %li.item
-              %img{:src => "img/coke-vanilla.jpg", :alt => "Coca-Cola vanilla"}/
-              .overlayHolder
-                .overlay
-                .inner
+              %a{:href => "#coke"}
+                %img{:src => "img/coke-vanilla.jpg", :alt => "Coca-Cola vanilla"}/
             %li.item
-              %img{:src => "img/revlon-outdoor.png", :alt => "Revlon"}/
-              .overlayHolder
-                .overlay
-                .inner
+              %a{:href => "#revlon"}
+                %img{:src => "img/revlon-outdoor.png", :alt => "Revlon"}/
             %li.item
-              %img{:src => "img/accenture-ipad.png", :alt => "Accenture"}/
-              .overlayHolder
-                .overlay
-                .inner
+              %a{:href => "#accenture"}
+                %img{:src => "img/accenture-ipad.png", :alt => "Accenture"}/
 
       %header#tech-heading technologist.
       %section#technologist
@@ -144,6 +200,7 @@
                 %td
                   %a{:href => "http://negomi.github.io/resume/"} R&eacute;sum&eacute;
 
+      / Footer
       %footer#footer
         %h3
           design & development by
