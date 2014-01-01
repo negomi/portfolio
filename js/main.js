@@ -47,7 +47,7 @@ $(document).ready(function() {
         });
     }
 
-    // Open relevant modal on click
+    // Open/close relevant modal on click
     function handleModal() {
         $('.grid').on('click', 'a', function (event) {
             event.preventDefault();
@@ -59,7 +59,7 @@ $(document).ready(function() {
                 $($activeModal).slideDown('fast', function() {
                     $('.close').on('click', 'a', function (event) {
                         event.preventDefault();
-                        $($activeModal).hide('fast');
+                        $($activeModal).fadeOut('fast');
                     });
                 });
             }

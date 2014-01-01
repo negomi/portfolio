@@ -655,16 +655,20 @@ a:hover {
   z-index: 100;
 }
 /* line 11, sass/partials/_modal.scss */
+.modal .close {
+  float: right;
+}
+/* line 14, sass/partials/_modal.scss */
 .modal .images, .modal .text {
   text-align: center;
 }
-/* line 13, sass/partials/_modal.scss */
+/* line 16, sass/partials/_modal.scss */
 .modal .images img, .modal .text img {
   display: inline;
   padding: 5px;
   max-width: 30%;
 }
-/* line 18, sass/partials/_modal.scss */
+/* line 21, sass/partials/_modal.scss */
 .modal .images p, .modal .text p {
   color: #eeeeee;
   padding: 5px;
