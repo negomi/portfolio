@@ -644,7 +644,7 @@ a:hover {
 .modal {
   display: none;
   background-color: #222222;
-  border: solid 1px black;
+  border: solid 10px #00ebbe;
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
   padding: 2%;
