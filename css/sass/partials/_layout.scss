@@ -10,10 +10,11 @@
 }
 
 #footer {
-  @extend .absolute-horizontal-center;
   background-color: $dark-gray;
   font-family: $secondary-font;
   padding: 1%;
+  text-align: center;
+  width: 100%;
   h3, p {
     color: $mid-gray;
   }

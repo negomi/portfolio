@@ -444,14 +444,16 @@ table {
   background-color: #222222;
   font-family: "Open Sans", sans-serif;
   padding: 1%;
+  text-align: center;
+  width: 100%;
 }
-/* line 17, sass/partials/_layout.scss */
+/* line 18, sass/partials/_layout.scss */
 #footer h3, #footer p {
   color: #666666;
 }
 
-/* line 22, sass/partials/_layout.scss */
-.absolute-horizontal-center, #footer, #welcome header {
+/* line 23, sass/partials/_layout.scss */
+.absolute-horizontal-center, #welcome header {
   position: absolute;
   text-align: center;
   width: 100%;
