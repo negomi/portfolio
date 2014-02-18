@@ -54,12 +54,14 @@ $(document).ready(function() {
 
             var $activeModal = $(this).attr('href');
             var $anyModal = $('.modal');
+            var $modalBg = $('.modal-bg');
 
             if (!($anyModal.is(':visible'))) {
-                $($activeModal).slideDown('fast', function() {
+                $($modalBg).show();
+                $($activeModal).fadeIn('fast', function() {
                     $('.close').on('click', 'a', function (event) {
                         event.preventDefault();
-                        $($activeModal).fadeOut('fast');
+                        $($activeModal).add($modalBg).hide();
                     });
                 });
             }

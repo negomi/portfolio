@@ -1,3 +1,12 @@
+.modal-bg {
+        background-color: transparentize(black, 0.4);
+        display: none;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 99;
+}
+
 .modal {
         display: none;
         background-color: $dark-gray;
@@ -6,7 +15,7 @@
         line-height: 1.5;
         padding: 2%;
         position: fixed;
-        top: 5%; left: 10%; right: 10%;
+        top: 10%; left: 10%; right: 10%;
         z-index: 100;
         .close {
                 float: right;
