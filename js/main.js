@@ -57,11 +57,10 @@ $(document).ready(function() {
             var $modalBg = $('.modal-bg');
 
             if (!($anyModal.is(':visible'))) {
-                $($modalBg).show();
-                $($activeModal).fadeIn('fast', function() {
+                $($activeModal).add($modalBg).fadeIn(100, function() {
                     $('.close').on('click', 'a', function (event) {
                         event.preventDefault();
-                        $($activeModal).add($modalBg).hide();
+                        $($activeModal).add($modalBg).fadeOut('fast');
                     });
                 });
             }
