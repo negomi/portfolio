@@ -18,7 +18,7 @@ $(document).ready(function() {
 
     // Scroll to all internal links
     function smoothScroll() {
-        $('a[href^="#"]').on('click',function (event) {
+        $('a[href^="#"]').on('click',function(event) {
             event.preventDefault();
 
             var target = this.hash,
@@ -34,8 +34,8 @@ $(document).ready(function() {
 
     // Assign nav classes based on section visibility
     function checkVisible(section, navLink) {
-        $(section).bind('inview', function (event, visible) {
-            if (visible === true) {
+        $(section).bind('inview', function(event, visible) {
+            if (visible) {
                 if ($(navLink).hasClass('fa-circle-o')) {
                     $(navLink).addClass('fa-circle').removeClass('fa-circle-o');
                 }
@@ -49,7 +49,7 @@ $(document).ready(function() {
 
     // Open/close relevant modal on click
     function handleModal() {
-        $('.grid').on('click', 'a', function (event) {
+        $('.grid').on('click', 'a', function(event) {
             event.preventDefault();
 
             var $activeModal = $(this).attr('href');
@@ -57,8 +57,8 @@ $(document).ready(function() {
             var $modalBg = $('.modal-bg');
 
             if (!($anyModal.is(':visible'))) {
-                $($activeModal).add($modalBg).fadeIn(100, function() {
-                    $('.close').on('click', 'a', function (event) {
+                $($activeModal).add($modalBg).fadeIn('fast', function() {
+                    $('.close').on('click', 'a', function(event) {
                         event.preventDefault();
                         $($activeModal).add($modalBg).fadeOut('fast');
                     });
