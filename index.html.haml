@@ -100,7 +100,14 @@
       %section#developer
         .content
           %h1 I love to write code and make web-based things.
-
+          .project
+            .image
+              %img{:src => "img/nyan.png", :alt => "nyansweepwer"}/
+            .text
+              %h2
+                %a{:href => "http://negomi.github.io/nyansweeper/"} WordNursery
+              %h3 HTML5 | JavaScript
+              %p A Nyan Cat-themed minesweeper game.
           .project
             .image
               %img{:src => "img/wordnursery.png", :alt => "WordNursery"}/
@@ -111,20 +118,20 @@
               %p A vocabulary builder. Search for new words via the Wordnik API, learn their meaning, and store them till you know them.
           .project
             .image
+              %img{:src => "img/oomerang.png", :alt => "Oomerang"}/
+            .text
+              %h2
+                %a{:href => "http://oomerang.herokuapp.com/"} Oomerang
+              %h3 Rails | JavaScript | AJAX | Bootstrap
+              %p A geolocation-based lost and found app that uses the Google Maps and Google Places APIs.
+          .project
+            .image
               %img{:src => "img/hugbot.png", :alt => "hugbot"}/
             .text
               %h2
                 %a{:href => "http://twitter.com/hugsorpugs"} hugbot
-              %h3 Node.js | JavaScript
+              %h3 Node.js
               %p A Twitter bot that sends people hugs and occasionally pugs. Uses the Twitter Streaming API.
-          .project
-            .image
-              %img{:src => "img/oomerang.png", :alt => "Oomerang"}/
-            .text
-              %h2
-                %a{:href => "http://oomerang.it/"} Oomerang
-              %h3 Rails | JavaScript | AJAX | Bootstrap
-              %p A geolocation-based lost and found app that uses the Google Maps and Google Places APIs.
           .project
             .image
               %img{:src => "img/thoughtverse.png", :alt => "Thoughtverse"}/
@@ -141,14 +148,14 @@
           /       %a{:href => "http://psychoviz.herokuapp.com/"} PsychoViz
           /     %h3 Rails | CoffeeScript | Chart.js | TukTuk
           /     %p An interactive quiz that lets you discover and visualize your MBTI score.
-          .project
-            .image
-              %img{:src => "img/prettystocks.png", :alt => "PrettyStocks"}/
-            .text
-              %h2
-                %a{:href => "http://prettystocks.herokuapp.com/"} PrettyStocks
-              %h3 HTML | CSS | Ruby | Sinatra
-              %p A stock-finder tool that uses the YahooFinance Ruby module to display current data for any stock symbol.
+          / .project
+          /   .image
+          /     %img{:src => "img/prettystocks.png", :alt => "PrettyStocks"}/
+          /   .text
+          /     %h2
+          /       %a{:href => "http://prettystocks.herokuapp.com/"} PrettyStocks
+          /     %h3 HTML | CSS | Ruby | Sinatra
+          /     %p A stock-finder tool that uses the YahooFinance Ruby module to display current data for any stock symbol.
 
       %header#cre-heading creative.
       %section#creative
