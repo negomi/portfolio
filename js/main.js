@@ -81,8 +81,10 @@ $(document).ready(function() {
 
     // Lazyload images
     $(function() {
-        $('.lazy').lazyload({
-            effect : 'fadeIn'
+        imagesLoaded('#welcome', function() {
+            $('.lazy').lazyload({
+                effect : 'fadeIn'
+            });
         });
     });
 
