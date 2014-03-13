@@ -15,9 +15,6 @@
     @include outer-container;
     font-family: $secondary-font;
     padding: 2%;
-    h1 {
-      font-family: $primary-font;
-    }
   }
   #developer {
     .project {

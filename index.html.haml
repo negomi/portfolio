@@ -1,97 +1,97 @@
 !!!
 %html
   %head
-    %meta{:charset => "utf-8"}
-    %link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Open+Sans|Changa+One"}/
-    %link{:rel => "stylesheet", :href => "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"}/
-    %link{:rel => "stylesheet", :href => "http://www.justinaguilar.com/animations/css/animations.css"}/
-    %link{:rel => "stylesheet", :href => "css/main.min.css"}/
+    %meta{charset: "utf-8"}
+    %link{rel: "stylesheet", href: "http://fonts.googleapis.com/css?family=Open+Sans|Changa+One"}/
+    %link{rel: "stylesheet", href: "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"}/
+    %link{rel: "stylesheet", href: "http://www.justinaguilar.com/animations/css/animations.css"}/
+    %link{rel: "stylesheet", href: "css/main.min.css"}/
     %title Imogen Wentworth | portfolio
   %body
 
     / Navigation
     %ul#nav
       %li
-        %a{:href => "#welcome"}
+        %a{href: "#welcome"}
           %i#wel-btn.fa.fa-circle
       %li
-        %a{:href => "#dev-heading"}
+        %a{href: "#dev-heading"}
           %i#dev-btn.fa.fa-circle-o
       %li
-        %a{:href => "#cre-heading"}
+        %a{href: "#cre-heading"}
           %i#cre-btn.fa.fa-circle-o
       %li
-        %a{:href => "#tech-heading"}
+        %a{href: "#tech-heading"}
           %i#tech-btn.fa.fa-circle-o
 
     / Modals
     .modal-bg
       .modal#stork
         .close
-          %a{:href => "/"}
+          %a{href: "/"}
             %i.fa.fa-times.fa-3x
         .images
-          %img{:src => "img/stork-cupcakes.png", :alt => "Stork cupcakes"}/
-          %img{:src => "img/stork-brownies.png", :alt => "Stork brownies"}/
-          %img{:src => "img/stork-sponge.png", :alt => "Stork sponge"}/
+          %img{alt: "Stork cupcakes", src: "img/stork-cupcakes.png" }/
+          %img{alt: "Stork brownies", src: "img/stork-brownies.png" }/
+          %img{alt: "Stork sponge", src: "img/stork-sponge.png" }/
         .text
           %p Heritage print campaign for Stork margarine, spring/summer 2013
       .modal#ikea
         .close
-          %a{:href => "/"}
+          %a{href: "/"}
             %i.fa.fa-times.fa-3x
         .images
-          %img{:src => "img/ikea-email.png", :alt => "IKEA"}/
+          %img{alt: "IKEA", src: "img/ikea-email.png" }/
         .text
           %p Email to promote IKEA's BEST&Aring; range, a customisable modular storage system
           %p
-            %a{:href => "https://raw.github.com/negomi/portfolio/gh-pages/img/ikea-full.png", :target => "_blank"}
+            %a{href: "https://raw.github.com/negomi/portfolio/gh-pages/img/ikea-full.png", :target => "_blank"}
               Read it
               %i.fa.fa-arrow-right
       .modal#virgin
         .close
-          %a{:href => "/"}
+          %a{href: "/"}
             %i.fa.fa-times.fa-3x
         .images
-          %img{:src => "img/virgin-email.gif", :alt => "Virgin Holidays"}/
+          %img{alt: "Virgin Holidays", src: "img/virgin-email.gif"}/
         .text
           %p Email campaign to persuade Londoners to escape the UK's wet weather with a last-minute break
       .modal#coke
         .close
-          %a{:href => "/"}
+          %a{href: "/"}
             %i.fa.fa-times.fa-3x
         .images
-          %img{:src => "img/coke-vanilla.jpg", :alt => "Coca-Cola vanilla"}/
+          %img{alt: "Coca-Cola vanilla", src: "img/coke-vanilla.jpg" }/
         .text
           %p April Fool's Day press ad announcing the return of Coca-Cola vanilla after an 8-year break
       .modal#revlon
         .close
-          %a{:href => "/"}
+          %a{href: "/"}
             %i.fa.fa-times.fa-3x
         .images
-          %img{:src => "img/revlon-press.png", :alt => "Revlon"}/
-          %img{:src => "img/revlon-outdoor.png", :alt => "Revlon"}/
+          %img{alt: "Revlon", src: "img/revlon-press.png" }/
+          %img{alt: "Revlon", src: "img/revlon-outdoor.png" }/
         .text
           %p Campaign tagline for the launch of Nearly Naked, Revlon's skintone-matching makeup range
       .modal#accenture
         .close
-          %a{:href => "/"}
+          %a{href: "/"}
             %i.fa.fa-times.fa-3x
         .images
-          %img{:src => "img/accenture-mobile.png", :alt => "Accenture"}/
-          %img{:src => "img/accenture-mobile2.png", :alt => "Accenture"}/
-          %img{:src => "img/accenture-mobile3.png", :alt => "Accenture"}/
+          %img{alt: "Accenture", src: "img/accenture-mobile.png" }/
+          %img{alt: "Accenture", src: "img/accenture-mobile2.png" }/
+          %img{alt: "Accenture", src: "img/accenture-mobile3.png" }/
         .text
           %p Microsite to help prospective employees get started in their Accenture career
 
     / Landing page
-    #welcome
+    #welcome.lazy{data: {original: "img/blackwall.jpg"}}
       %header
         .intro
           %h1 Imogen Wentworth
           %h2 portfolio
         #down-btn
-          %a{:href => "#work"}
+          %a{href: "#work"}
             %i.fa.fa-chevron-circle-down.fa-5x.pulse
 
     / Portfolio stuffs
@@ -99,87 +99,71 @@
       %header#dev-heading developer.
       %section#developer
         .content
-          %h1 I love to write code and make web-based things.
+          / %h1 I love to write code and make web-based things.
           .project
             .image
-              %img{:src => "img/nyan.png", :alt => "nyansweepwer"}/
+              %img{alt: "nyansweepwer", class: "lazy", data: { original: "img/nyan.png" }}/
             .text
               %h2
-                %a{:href => "http://negomi.github.io/nyansweeper/"} nyansweeper
+                %a{href: "http://negomi.github.io/nyansweeper/"} nyansweeper
               %h3 HTML5 | JavaScript
-              %p A Nyan Cat-themed minesweeper game.
+              %p A Nyan Cat-themed minesweeper game written in pure JS. Makes use of the module pattern and object-oriented techniques.
           .project
             .image
-              %img{:src => "img/wordnursery.png", :alt => "WordNursery"}/
+              %img{alt: "WordNursery", class: "lazy", data: { original: "img/wordnursery.png" }}/
             .text
               %h2
-                %a{:href => "http://wordnursery.herokuapp.com/"} WordNursery
+                %a{href: "http://wordnursery.herokuapp.com/"} WordNursery
               %h3 Rails | Sass | Compass | CoffeeScript | Foundation
-              %p A vocabulary builder. Search for new words via the Wordnik API, learn their meaning, and store them till you know them.
+              %p A vocabulary builder tool. Parses data from the Wordnik API through a Rails back end with a PostgreSQL database. Responsive UI with AJAX calls written in CoffeeScript.
           .project
             .image
-              %img{:src => "img/thoughtverse.png", :alt => "Thoughtverse"}/
+              %img{alt: "Thoughtverse", class: "lazy", data: { original: "img/thoughtverse.png" }}/
             .text
               %h2
-                %a{:href => "http://thoughtverse.herokuapp.com/"} Thoughtverse
+                %a{href: "http://thoughtverse.herokuapp.com/"} Thoughtverse
               %h3 Rails | Haml | Sass | RSpec | Capybara | Cucumber
-              %p A microblogging platform for discovering and sharing interesting snippets or links. Built with TDD.
+              %p A microblogging platform. Rails back end developed with TDD practices for full test coverage. Features a user authentication system built from scratch.
           .project
             .image
-              %img{:src => "img/hugbot.png", :alt => "hugbot"}/
+              %img{alt: "hugbot", class: "lazy", data: { original: "img/hugbot.png" }}/
             .text
               %h2
-                %a{:href => "http://twitter.com/hugsorpugs"} hugbot
+                %a{href: "http://twitter.com/hugsorpugs"} hugbot
               %h3 Node.js
-              %p A Twitter bot that sends people hugs and occasionally pugs. Uses the Twitter Streaming API.
+              %p A Twitter bot that watches for Tweets containing key phrases, and generates random replies to those users. Powered by the Twitter Streaming API via the ntwitter Node module.
           .project
             .image
-              %img{:src => "img/oomerang.png", :alt => "Oomerang"}/
+              %img{alt: "Oomerang", class: "lazy", data: { original: "img/oomerang.png" }}/
             .text
               %h2
-                %a{:href => "http://oomerang.herokuapp.com/"} Oomerang
+                %a{href: "http://oomerang.herokuapp.com/"} Oomerang
               %h3 Rails | JavaScript | AJAX | Bootstrap
-              %p A geolocation-based lost and found app that uses the Google Maps and Google Places APIs.
-          / .project
-          /   .image
-          /     %img{:src => "img/psychoviz.jpg", :alt => "PsychoViz"}/
-          /   .text
-          /     %h2
-          /       %a{:href => "http://psychoviz.herokuapp.com/"} PsychoViz
-          /     %h3 Rails | CoffeeScript | Chart.js | TukTuk
-          /     %p An interactive quiz that lets you discover and visualize your MBTI score.
-          / .project
-          /   .image
-          /     %img{:src => "img/prettystocks.png", :alt => "PrettyStocks"}/
-          /   .text
-          /     %h2
-          /       %a{:href => "http://prettystocks.herokuapp.com/"} PrettyStocks
-          /     %h3 HTML | CSS | Ruby | Sinatra
-          /     %p A stock-finder tool that uses the YahooFinance Ruby module to display current data for any stock symbol.
+              %p A geolocation-based lost and found app. Uses the Google Maps and Google Places APIs.
 
       %header#cre-heading creative.
       %section#creative
         .content
-          %h1 I used to write copy for print, digital, outdoor & retail campaigns.
+          %h3 I used to write copy for print, digital, outdoor & retail campaigns.
           %ul.grid.js-masonry
             %li.item
-              %a{:href => "#stork"}
-                %img{:src => "img/stork-brownies.png", :alt => "Accenture"}/
+              %a{href: "#stork"}
+                %img{alt: "Accenture", src: "img/stork-brownies.png"}/
             %li.item
-              %a{:href => "#ikea"}
-                %img{:src => "img/ikea-email.png", :alt => "IKEA"}/
+              %a{href: "#ikea"}
+                %img{alt: "IKEA", src: "img/ikea-email.png"}/
             %li.item
-              %a{:href => "#virgin"}
-                %img{:src => "img/virgin-email.png", :alt => "Virgin Holidays"}/
+              %a{href: "#virgin"}
+                %img{alt: "Virgin Holidays", src: "img/virgin-email.png"}/
             %li.item
-              %a{:href => "#coke"}
-                %img{:src => "img/coke-vanilla.jpg", :alt => "Coca-Cola vanilla"}/
+              %a{href: "#coke"}
+                %img{alt: "Coca-Cola vanilla", src: "img/coke-vanilla.jpg"}/
             %li.item
-              %a{:href => "#revlon"}
-                %img{:src => "img/revlon-outdoor.png", :alt => "Revlon"}/
+              %a{href: "#revlon"}
+                %img{alt: "Revlon", src: "img/revlon-outdoor.png"}/
             %li.item
-              %a{:href => "#accenture"}
-                %img{:src => "img/accenture-ipad.png", :alt => "Accenture"}/
+              %a{href: "#accenture"}
+                %img{alt: "Accenture", src: "img/accenture-ipad.png"}/
 
       %header#tech-heading technologist.
       %section#technologist
@@ -192,38 +176,39 @@
                 %td
                   %i.fa.fa-github.fa-2x
                 %td
-                  %a{:href => "https://github.com/negomi/"} GitHub
+                  %a{href: "https://github.com/negomi/"} GitHub
               %tr
                 %td
                   %i.fa.fa-twitter.fa-2x
                 %td
-                  %a{:href => "https://twitter.com/imogenwentworth"} Twitter
+                  %a{href: "https://twitter.com/imogenwentworth"} Twitter
               %tr
                 %td
                   %i.fa.fa-linkedin.fa-2x
                 %td
-                  %a{:href => "http://www.linkedin.com/in/imogenwentworth/"} LinkedIn
+                  %a{href: "http://www.linkedin.com/in/imogenwentworth/"} LinkedIn
               %tr
                 %td
                   %i.fa.fa-pencil.fa-2x
                 %td
-                  %a{:href => "http://imogenation.net/"} Blog
+                  %a{href: "http://imogenation.net/"} Blog
               %tr
                 %td
                   %i.fa.fa-briefcase.fa-2x
                 %td
-                  %a{:href => "http://negomi.github.io/resume/"} R&eacute;sum&eacute;
+                  %a{href: "http://negomi.github.io/resume/"} R&eacute;sum&eacute;
 
       / Footer
       %footer#footer
         %h3
           design &amp; development by
-          %a{:href => "https://twitter.com/imogenwentworth"} @imogenwentworth
+          %a{href: "https://twitter.com/imogenwentworth"} @imogenwentworth
         %p Built with Haml, Sass, Compass, Bourbon Neat and Masonry
 
-    %script{:src => "http://code.jquery.com/jquery-1.10.2.min.js", :type => "text/javascript"}
-    %script{:src => "js/jquery-inview.js", :type => "text/javascript"}
-    %script{:src => "js/jquery-masonry.js", :type => "text/javascript"}
-    %script{:src => "js/imagesloaded.js", :type => "text/javascript"}
-    %script{:src => "js/modernizr.js", :type => "text/javascript"}
-    %script{:src => "js/main.js", :type => "text/javascript"}
+    %script{src: "http://code.jquery.com/jquery-1.10.2.min.js", type: "text/javascript"}
+    %script{src: "js/jquery-inview.js", type: "text/javascript"}
+    %script{src: "js/jquery-lazyload.js", type: "text/javascript"}
+    %script{src: "js/jquery-masonry.js", type: "text/javascript"}
+    %script{src: "js/imagesloaded.js", type: "text/javascript"}
+    %script{src: "js/modernizr.js", type: "text/javascript"}
+    %script{src: "js/main.js", type: "text/javascript"}
