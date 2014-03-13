@@ -1,25 +1,33 @@
 // Landing page styles
 #welcome {
-  background-color: $dark-gray;
-  background: url('../img/blackwall.jpg') no-repeat;
-  @include background-size(cover);
-  @include stretch;
+  background-color: black;
+
   header {
     @extend .absolute-horizontal-center;
     bottom: 5%;
-    .intro {
-      font-family: $primary-font;
-      h1 {
-        color: $mid-gray;
-        font-size: 4em;
-      }
-      h2 {
-        color: $light-gray;
-        font-size: 3em;
-      }
+  }
+
+  .intro {
+    font-family: $primary-font;
+    h1 {
+      color: $mid-gray;
+      font-size: 4em;
     }
-    #down-btn {
-      margin-top: 8%;
+    h2 {
+      color: $light-gray;
+      font-size: 3em;
     }
   }
+
+  #down-btn {
+    margin-top: 8%;
+  }
 }
+
+.bg {
+  display: none;
+  background: url('../img/blackwall.jpg') no-repeat;
+  @include background-size(cover);
+  @include stretch;
+}
+

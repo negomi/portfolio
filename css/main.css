@@ -476,7 +476,34 @@ a:hover {
 
 /* line 2, sass/partials/_welcome.scss */
 #welcome {
-  background-color: #222222;
+  background-color: black;
+}
+/* line 5, sass/partials/_welcome.scss */
+#welcome header {
+  bottom: 5%;
+}
+/* line 10, sass/partials/_welcome.scss */
+#welcome .intro {
+  font-family: "Changa One", sans-serif;
+}
+/* line 12, sass/partials/_welcome.scss */
+#welcome .intro h1 {
+  color: #666666;
+  font-size: 4em;
+}
+/* line 16, sass/partials/_welcome.scss */
+#welcome .intro h2 {
+  color: #eeeeee;
+  font-size: 3em;
+}
+/* line 22, sass/partials/_welcome.scss */
+#welcome #down-btn {
+  margin-top: 8%;
+}
+
+/* line 27, sass/partials/_welcome.scss */
+.bg {
+  display: none;
   background: url("../img/blackwall.jpg") no-repeat;
   background-size: cover;
   position: absolute;
@@ -484,28 +511,6 @@ a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-}
-/* line 7, sass/partials/_welcome.scss */
-#welcome header {
-  bottom: 5%;
-}
-/* line 10, sass/partials/_welcome.scss */
-#welcome header .intro {
-  font-family: "Changa One", sans-serif;
-}
-/* line 12, sass/partials/_welcome.scss */
-#welcome header .intro h1 {
-  color: #666666;
-  font-size: 4em;
-}
-/* line 16, sass/partials/_welcome.scss */
-#welcome header .intro h2 {
-  color: #eeeeee;
-  font-size: 3em;
-}
-/* line 21, sass/partials/_welcome.scss */
-#welcome header #down-btn {
-  margin-top: 8%;
 }
 
 /* line 2, sass/partials/_work.scss */

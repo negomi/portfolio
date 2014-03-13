@@ -81,13 +81,12 @@ $(document).ready(function() {
 
     // Lazyload images
     $(function() {
-        imagesLoaded('#welcome', function() {
-            $('.lazy').lazyload({
-                effect : 'fadeIn'
-            });
+        $('img.lazy').lazyload({
+            effect : 'fadeIn'
         });
     });
 
+    imagesLoaded('.bg', function() { $('.bg').fadeIn(); });
     repositionNav();
     sizeContent();
     smoothScroll();
