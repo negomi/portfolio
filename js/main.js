@@ -79,6 +79,13 @@ $(document).ready(function() {
         });
     });
 
+    // Lazyload images
+    $(function() {
+        $('img.lazy').add('#welcome').lazyload({
+            effect : 'fadeIn'
+        });
+    });
+
     repositionNav();
     sizeContent();
     smoothScroll();
