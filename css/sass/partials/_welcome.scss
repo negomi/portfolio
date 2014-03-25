@@ -27,6 +27,7 @@
 .bg {
   display: none;
   background: url('../img/blackwall.jpg') no-repeat;
+  height: auto;
   @include background-size(cover);
   @include stretch;
 }

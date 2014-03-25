@@ -505,6 +505,7 @@ a:hover {
 .bg {
   display: none;
   background: url("../img/blackwall.jpg") no-repeat;
+  height: auto;
   background-size: cover;
   position: absolute;
   top: 0;

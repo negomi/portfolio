@@ -102,7 +102,15 @@
           / %h1 I love to write code and make web-based things.
           .project
             .image
-              %img{alt: "nyansweepwer", class: "lazy", data: { original: "img/nyan.png" }}/
+              %img{alt: "BikeStash", class: "lazy", data: { original: "img/bikestash.png", height: 280 }}/
+            .text
+              %h2
+                %a{href: "http://negomi.github.io/bikestash/"} BikeStash
+              %h3 D3.js | Google Maps API
+              %p A visualization of free public bike parking facilities in San Francisco. Built with data from the SF Open Data Portal. Bigger circles indicate more spaces available.
+          .project
+            .image
+              %img{alt: "nyansweepwer", class: "lazy", data: { original: "img/nyan.png", height: 281 }}/
             .text
               %h2
                 %a{href: "http://negomi.github.io/nyansweeper/"} nyansweeper
@@ -110,7 +118,7 @@
               %p A Nyan Cat-themed minesweeper game written in pure JS. Makes use of the module pattern and object-oriented JavaScript.
           .project
             .image
-              %img{alt: "WordNursery", class: "lazy", data: { original: "img/wordnursery.png" }}/
+              %img{alt: "WordNursery", class: "lazy", data: { original: "img/wordnursery.png", height: 355 }}/
             .text
               %h2
                 %a{href: "http://wordnursery.herokuapp.com/"} WordNursery
@@ -118,15 +126,7 @@
               %p A vocabulary builder tool. Parses data from the Wordnik API through a Rails back end with a PostgreSQL database. Responsive UI with AJAX calls written in CoffeeScript.
           .project
             .image
-              %img{alt: "Thoughtverse", class: "lazy", data: { original: "img/thoughtverse.png" }}/
-            .text
-              %h2
-                %a{href: "http://thoughtverse.herokuapp.com/"} Thoughtverse
-              %h3 Rails | Haml | Sass | RSpec | Capybara | Cucumber
-              %p A microblogging platform. Rails back end developed with TDD practices for full test coverage. User authentication system built from scratch.
-          .project
-            .image
-              %img{alt: "hugbot", class: "lazy", data: { original: "img/hugbot.png" }}/
+              %img{alt: "hugbot", class: "lazy", data: { original: "img/hugbot.png", height: 320 }}/
             .text
               %h2
                 %a{href: "http://twitter.com/hugsorpugs"} hugbot
@@ -134,12 +134,20 @@
               %p A Twitter bot that watches for Tweets containing key phrases, and generates random replies to those users. Powered by the Twitter Streaming API via the ntwitter Node module.
           .project
             .image
-              %img{alt: "Oomerang", class: "lazy", data: { original: "img/oomerang.png" }}/
+              %img{alt: "Thoughtverse", class: "lazy", data: { original: "img/thoughtverse.png", height: 369 }}/
             .text
               %h2
-                %a{href: "http://oomerang.herokuapp.com/"} Oomerang
-              %h3 Rails | JavaScript | AJAX | Bootstrap
-              %p A geolocation-based lost and found app. Uses the Google Maps and Google Places APIs.
+                %a{href: "http://thoughtverse.herokuapp.com/"} Thoughtverse
+              %h3 Rails | Haml | Sass | RSpec | Capybara | Cucumber
+              %p A microblogging platform. Rails back end developed with TDD practices for full test coverage. User authentication system built from scratch.
+          / .project
+          /   .image
+          /     %img{alt: "Oomerang", class: "lazy", data: { original: "img/oomerang.png" }}/
+          /   .text
+          /     %h2
+          /       %a{href: "http://oomerang.herokuapp.com/"} Oomerang
+          /     %h3 Rails | JavaScript | AJAX | Bootstrap
+          /     %p A geolocation-based lost and found app. Uses the Google Maps and Google Places APIs.
 
       %header#cre-heading creative.
       %section#creative

@@ -86,7 +86,7 @@ $(document).ready(function() {
         });
     });
 
-    imagesLoaded('.bg', function() { $('.bg').fadeIn(); });
+    imagesLoaded('.bg', function() { $('.bg').fadeIn('slow'); });
     repositionNav();
     sizeContent();
     smoothScroll();
