@@ -16,22 +16,6 @@ $(document).ready(function() {
         $('#work').add('#bg').css('top', $welcomeHeight);
     }
 
-    // Scroll to all internal links
-    function smoothScroll() {
-        $('a[href^="#"]').on('click',function(event) {
-            event.preventDefault();
-
-            var target = this.hash,
-            $target = $(target);
-
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top
-            }, 600, 'swing', function () {
-                window.location.hash = target;
-            });
-        });
-    }
-
     // Assign nav classes based on section visibility
     function checkVisible(section, navLink) {
         $(section).bind('inview', function(event, visible) {
@@ -44,6 +28,20 @@ $(document).ready(function() {
                     $(navLink).addClass('fa-circle-o').removeClass('fa-circle');
                 }
             }
+        });
+    }
+
+    // Scroll to all internal links
+    function smoothScroll() {
+        $('a[href^="#"]').on('click',function(event) {
+            event.preventDefault();
+
+            var target = this.hash,
+            $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 600, 'swing');
         });
     }
 
