@@ -1,323 +1,71 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Changa+One' rel='stylesheet' type='text/css'>
-    <link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet' type='text/css'>
-    <link href='http://www.justinaguilar.com/animations/css/animations.css' rel='stylesheet' type='text/css'>
-    <link href='css/main.min.css' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://necolas.github.io/normalize.css/3.0.2/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/libs/animations.min.css" rel="stylesheet" type="text/css">
+    <link href="css/libs/devices.min.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
     <title>Imogen Wentworth | portfolio</title>
   </head>
   <body>
-    <!-- Navigation -->
-    <ul id='nav'>
-      <li>
-        <a href='#welcome'>
-          <i class='fa fa-circle' id='wel-btn'></i>
-        </a>
-      </li>
-      <li>
-        <a href='#dev-heading'>
-          <i class='fa fa-circle-o' id='dev-btn'></i>
-        </a>
-      </li>
-      <li>
-        <a href='#creative-heading'>
-          <i class='fa fa-circle-o' id='cre-btn'></i>
-        </a>
-      </li>
-      <li>
-        <a href='#tech-heading'>
-          <i class='fa fa-circle-o' id='tech-btn'></i>
-        </a>
-      </li>
-    </ul>
-    <!-- Modals -->
-    <div class='modal-bg'>
-      <div class='modal' id='stork'>
-        <div class='close'>
-          <a href='/'>
-            <i class='fa fa-times fa-3x'></i>
-          </a>
-        </div>
-        <div class='images'>
-          <img alt='Stork cupcakes' src='img/stork-cupcakes.png'>
-          <img alt='Stork brownies' src='img/stork-brownies.png'>
-          <img alt='Stork sponge' src='img/stork-sponge.png'>
-        </div>
-        <div class='text'>
-          <p>Heritage print campaign for Stork margarine, spring/summer 2013</p>
+    <header>
+      <div class="header-image-wrapper">
+        <div class="header-image cd-browser bigEntrance">
+          <div class="cd-nav">
+            <span class="cd-red"></span>
+            <span class="cd-yellow"></span>
+            <span class="cd-green"></span>
+          </div>
+          <div class="cd-page">
+            <div class="browser-content cd-fill">
+              <i class="fa fa-code"></i>
+            </div>
+          </div>
         </div>
       </div>
-      <div class='modal' id='ikea'>
-        <div class='close'>
-          <a href='/'>
-            <i class='fa fa-times fa-3x'></i>
-          </a>
-        </div>
-        <div class='images'>
-          <img alt='IKEA' src='img/ikea-email.png'>
-        </div>
-        <div class='text'>
-          <p>Email to promote IKEA's BEST&Aring; range, a customisable modular storage system</p>
-          <p>
-            <a href='https://raw.github.com/negomi/portfolio/gh-pages/img/ikea-full.png' target='_blank'>
-              Read it
-              <i class='fa fa-arrow-right'></i>
-            </a>
-          </p>
-        </div>
-      </div>
-      <div class='modal' id='virgin'>
-        <div class='close'>
-          <a href='/'>
-            <i class='fa fa-times fa-3x'></i>
-          </a>
-        </div>
-        <div class='images'>
-          <img alt='Virgin Holidays' src='img/virgin-email.gif'>
-        </div>
-        <div class='text'>
-          <p>Email campaign to persuade Londoners to escape the UK's wet weather with a last-minute break</p>
-        </div>
-      </div>
-      <div class='modal' id='coke'>
-        <div class='close'>
-          <a href='/'>
-            <i class='fa fa-times fa-3x'></i>
-          </a>
-        </div>
-        <div class='images'>
-          <img alt='Coca-Cola vanilla' src='img/coke-vanilla.jpg'>
-        </div>
-        <div class='text'>
-          <p>April Fool's Day press ad announcing the return of Coca-Cola vanilla after an 8-year break</p>
-        </div>
-      </div>
-      <div class='modal' id='revlon'>
-        <div class='close'>
-          <a href='/'>
-            <i class='fa fa-times fa-3x'></i>
-          </a>
-        </div>
-        <div class='images'>
-          <img alt='Revlon' src='img/revlon-press.png'>
-          <img alt='Revlon' src='img/revlon-outdoor.png'>
-        </div>
-        <div class='text'>
-          <p>Campaign tagline for the launch of Nearly Naked, Revlon's skintone-matching makeup range</p>
-        </div>
-      </div>
-      <div class='modal' id='accenture'>
-        <div class='close'>
-          <a href='/'>
-            <i class='fa fa-times fa-3x'></i>
-          </a>
-        </div>
-        <div class='images'>
-          <img alt='Accenture' src='img/accenture-mobile.png'>
-          <img alt='Accenture' src='img/accenture-mobile2.png'>
-          <img alt='Accenture' src='img/accenture-mobile3.png'>
-        </div>
-        <div class='text'>
-          <p>Microsite to help prospective employees get started in their Accenture career</p>
-        </div>
-      </div>
-    </div>
-    <!-- Landing page -->
-    <div class='bg' id='welcome'>
-      <header>
-        <div class='intro'>
+
+      <div class="header-text-wrapper">
+        <div class="header-text">
           <h1>Imogen Wentworth</h1>
-          <h2>portfolio</h2>
+          <h2>UI Engineer</h2>
         </div>
-        <div id='down-btn'>
-          <a href='#work'>
-            <i class='fa fa-chevron-circle-down fa-5x pulse'></i>
-          </a>
-        </div>
-      </header>
-    </div>
-    <!-- Portfolio stuffs -->
-    <div id='work'>
-      <header id='dev-heading'>developer.</header>
-      <section id='developer'>
-        <div class='content'>
-          <!-- %h1 I love to write code and make web-based things. -->
-          <div class='project'>
-            <div class='image'>
-              <img alt='BikeStash' src='img/bikestash.png'>
-            </div>
-            <div class='text'>
-              <h2>
-                <a href='http://negomi.github.io/bikestash/'>BikeStash</a>
-              </h2>
-              <h3>D3.js | JSON | Google Maps API</h3>
-              <p>A visualization of free public bike parking facilities in San Francisco. Built with JSON data from the SF Open Data Portal. Bigger circles indicate more spaces available.</p>
-            </div>
-          </div>
-          <div class='project'>
-            <div class='image'>
-              <img alt='nyansweepwer' src='img/nyan.png'>
-            </div>
-            <div class='text'>
-              <h2>
-                <a href='http://negomi.github.io/nyansweeper/'>nyansweeper</a>
-              </h2>
-              <h3>HTML5 | JavaScript</h3>
-              <p>A Nyan Cat-themed minesweeper game written in pure JS. Makes use of the module pattern and object-oriented JavaScript.</p>
-            </div>
-          </div>
-          <div class='project'>
-            <div class='image'>
-              <img alt='WordNursery' src='img/wordnursery.png'>
-            </div>
-            <div class='text'>
-              <h2>
-                <a href='http://wordnursery.herokuapp.com/'>WordNursery</a>
-              </h2>
-              <h3>Rails | Sass | Compass | CoffeeScript | Foundation</h3>
-              <p>A vocabulary builder tool. Parses data from the Wordnik API through a Rails back end with a PostgreSQL database. Responsive UI with AJAX calls written in CoffeeScript.</p>
-            </div>
-          </div>
-          <div class='project'>
-            <div class='image'>
-              <img alt='hugbot' src='img/hugbot.png'>
-            </div>
-            <div class='text'>
-              <h2>
-                <a href='http://twitter.com/hugsorpugs'>hugbot</a>
-              </h2>
-              <h3>Node.js</h3>
-              <p>A Twitter bot that watches for Tweets containing key phrases, and generates random replies to those users. Powered by the Twitter Streaming API via the ntwitter Node module.</p>
-            </div>
-          </div>
-          <div class='project'>
-            <div class='image'>
-              <img alt='Thoughtverse' src='img/thoughtverse.png'>
-            </div>
-            <div class='text'>
-              <h2>
-                <a href='http://thoughtverse.herokuapp.com/'>Thoughtverse</a>
-              </h2>
-              <h3>Rails | Haml | Sass | RSpec | Capybara | Cucumber</h3>
-              <p>A microblogging platform. Rails back end developed with TDD practices for full test coverage. User authentication system built from scratch.</p>
-            </div>
-          </div>
-          <!-- .project -->
-          <!-- .image -->
-          <!-- %img{alt: "Oomerang", src: "img/oomerang.png"}/ -->
-          <!-- .text -->
-          <!-- %h2 -->
-          <!-- %a{href: "http://oomerang.herokuapp.com/"} Oomerang -->
-          <!-- %h3 Rails | JavaScript | AJAX | Bootstrap -->
-          <!-- %p A geolocation-based lost and found app. Uses the Google Maps and Google Places APIs. -->
-        </div>
-      </section>
-      <header id='creative-heading'>creative.</header>
-      <section id='creative'>
-        <div class='content'>
-          <h3>I used to write copy for print, digital, outdoor &amp; retail campaigns.</h3>
-          <ul class='grid js-masonry'>
-            <li class='item'>
-              <a href='#stork'>
-                <img alt='Accenture' src='img/stork-brownies.png'>
-              </a>
-            </li>
-            <li class='item'>
-              <a href='#ikea'>
-                <img alt='IKEA' src='img/ikea-email.png'>
-              </a>
-            </li>
-            <li class='item'>
-              <a href='#virgin'>
-                <img alt='Virgin Holidays' src='img/virgin-email.png'>
-              </a>
-            </li>
-            <li class='item'>
-              <a href='#coke'>
-                <img alt='Coca-Cola vanilla' src='img/coke-vanilla.jpg'>
-              </a>
-            </li>
-            <li class='item'>
-              <a href='#revlon'>
-                <img alt='Revlon' src='img/revlon-outdoor.png'>
-              </a>
-            </li>
-            <li class='item'>
-              <a href='#accenture'>
-                <img alt='Accenture' src='img/accenture-ipad.png'>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <header id='tech-heading'>technologist.</header>
-      <section id='technologist'>
-        <div class='content'>
-          <div class='image'>
-            <div class='circle'></div>
-          </div>
-          <div class='contact'>
-            <table>
-              <tr>
-                <td>
-                  <i class='fa fa-github fa-2x'></i>
-                </td>
-                <td>
-                  <a href='https://github.com/negomi/'>GitHub</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <i class='fa fa-twitter fa-2x'></i>
-                </td>
-                <td>
-                  <a href='https://twitter.com/imogenwentworth'>Twitter</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <i class='fa fa-linkedin fa-2x'></i>
-                </td>
-                <td>
-                  <a href='http://www.linkedin.com/in/imogenwentworth/'>LinkedIn</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <i class='fa fa-pencil fa-2x'></i>
-                </td>
-                <td>
-                  <a href='http://imogenation.net/'>Blog</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <i class='fa fa-briefcase fa-2x'></i>
-                </td>
-                <td>
-                  <a href='http://negomi.github.io/resume/'>R&eacute;sum&eacute;</a>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </section>
-      <!-- Footer -->
-      <footer id='footer'>
-        <h3>
-          design &amp; development by
-          <a href='https://twitter.com/imogenwentworth'>@imogenwentworth</a>
-        </h3>
-        <p>Built with Haml, Sass, Compass, Bourbon Neat and Masonry</p>
-      </footer>
-    </div>
-    <script src='http://code.jquery.com/jquery-1.10.2.min.js' type='text/javascript'></script>
-    <script src='js/jquery-inview.js' type='text/javascript'></script>
-    <script src='js/jquery-masonry.js' type='text/javascript'></script>
-    <script src='js/imagesloaded.js' type='text/javascript'></script>
-    <script src='js/modernizr.js' type='text/javascript'></script>
-    <script src='js/main.js' type='text/javascript'></script>
+      </div>
+
+      <div class="header-links">
+        <a href="https://github.com/negomi/" class="header-link" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+        <a href="https://twitter.com/imogenwentworth" class="header-link" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="http://www.linkedin.com/in/imogenwentworth/" class="header-link" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+        <a href="mailto:imogen.wentworth@gmail.com" class="header-link"><i class="fa fa-at fa-2x"></i></a>
+      </div>
+    </header>
+
+    <section class="intro">
+      <p class="intro-text">This is a playground for projects I work on in my free time. Most of the code I write now is private, but here you can find a selection of open source projects I've built or contributed to.</p>
+    </section>
+
+    <section class="projects">
+      <div class="project"></div>
+      <div class="project"></div>
+      <div class="project"></div>
+      <div class="project"></div>
+      <div class="project"></div>
+      <div class="project"></div>
+    </section>
+
+    <section class="writing">
+      <div class="blogposts-wrapper">
+        <div class="blogposts-heading"><i class="fa fa-pencil"></i><h3>Writing</h3></div>
+        <ul class="blogposts">
+          <li><a href="">Test post about some things</a></li>
+          <li><a href="">Another test post about some things</a></li>
+          <li><a href="">Bla bla bla</a></li>
+          <li><a href="">More of the same</a></li>
+          <li><a href="">Yep, and again</a></li>
+        </ul>
+      </div>
+    </section>
   </body>
 </html>

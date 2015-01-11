@@ -1,20 +1,49 @@
-$dark-gray: #222;
-$mid-gray: #666;
-$light-gray: #eee;
-$green: #00ebbe;
-$primary-font: 'Changa One', sans-serif;
-$secondary-font: 'Open Sans', sans-serif;
+$primary-font: 'Open Sans', sans-serif;
+$mobile-font-scale: 1.2rem;
+$tablet-font-scale: 1.4rem;
+$desktop-font-scale: 1.5rem;
 
-@import "compass/reset";
-@import "compass/css3";
-@import "compass/utilities";
-@import "compass/layout/sticky-footer";
-@import "compass/layout/stretching";
-@import "normalize";
-@import "bourbon/bourbon";
-@import "neat/neat";
-@import "partials/layout";
-@import "partials/typography";
-@import "partials/welcome";
-@import "partials/work";
-@import "partials/modal";
+$white: #FFF;
+$clouds: #ECF0F1;
+$silver: #BDC3C7;
+$alizarin: #E74C3C;
+$pomegranate: #C0392B;
+$carrot: #E67E22;
+$pumpkin: #D35400;
+$sun-flower: #F1C40F;
+$orange: #F39C12;
+$emerald: #2ECC71;
+$nephritis: #27AE60;
+$peter-river: #3498DB;
+$belize-hole: #2980B9;
+$wet-asphalt: #34495E;
+$midnight-blue: #2C3E50;
+$amethyst: #9B59B6;
+$wisteria: #8E44AD;
+
+$primary-color: $emerald;
+$secondary-color: $nephritis;
+
+@import 'partials/mixins.scss';
+@import 'partials/header.scss';
+@import 'partials/sections.scss';
+@import 'partials/intro.scss';
+@import 'partials/projects.scss';
+@import 'partials/writing.scss';
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+
+    font-family: $primary-font;
+}
+
+a {
+    text-decoration: none;
+
+    color: $primary-color;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
