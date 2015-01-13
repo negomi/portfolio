@@ -6,6 +6,8 @@ $desktop-font-scale: 1.5rem;
 $white: #FFF;
 $clouds: #ECF0F1;
 $silver: #BDC3C7;
+$concrete: #95A5A6;
+$asbestos: #7F8C8D;
 $alizarin: #E74C3C;
 $pomegranate: #C0392B;
 $carrot: #E67E22;
@@ -22,9 +24,10 @@ $amethyst: #9B59B6;
 $wisteria: #8E44AD;
 
 $primary-color: $emerald;
-$secondary-color: $nephritis;
+$secondary-color: $asbestos;
 
 @import 'partials/mixins.scss';
+@import 'partials/buttons.scss';
 @import 'partials/header.scss';
 @import 'partials/sections.scss';
 @import 'partials/intro.scss';
@@ -39,11 +42,6 @@ body {
 }
 
 a {
-    text-decoration: none;
-
     color: $primary-color;
-
-    &:hover {
-        text-decoration: underline;
-    }
+    text-decoration: none;
 }

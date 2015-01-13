@@ -1,3 +1,31 @@
+.btn, .btn-solid, .btn-clear {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.4rem;
+  font-size: initial; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .btn, .btn-solid, .btn-clear {
+      padding: 0.7rem 1.8rem;
+      font-size: 1.1rem; } }
+  @media (min-width: 1024px) {
+    .btn, .btn-solid, .btn-clear {
+      padding: 0.8rem 2rem;
+      font-size: 1.2rem; } }
+
+.btn-solid {
+  background: #2ecc71;
+  border: none;
+  color: white; }
+  .btn-solid:hover {
+    background: #54d98c; }
+
+.btn-clear {
+  background: transparent;
+  border: 4px solid white;
+  color: white; }
+  .btn-clear:hover {
+    background: rgba(255, 255, 255, 0.1); }
+
 header {
   display: flex;
   flex-flow: row wrap;
@@ -72,7 +100,7 @@ section {
   justify-content: center;
   padding: 3rem;
   background: white;
-  color: #2ecc71; }
+  color: #7f8c8d; }
   @media (min-width: 1024px) {
     .intro {
       padding: 5rem 0; } }
@@ -92,7 +120,11 @@ section {
 
 .project {
   flex: 1 100%;
-  height: 15rem; }
+  height: 17rem;
+  color: white;
+  font-size: 1.2rem; }
+  .project h3 {
+    margin-top: 0; }
   .project:nth-child(1) {
     background: #9b59b6; }
   .project:nth-child(2) {
@@ -108,10 +140,21 @@ section {
   @media (min-width: 768px) {
     .project {
       flex: 1 50%;
-      height: 18rem; } }
+      height: 19rem;
+      font-size: 1.4rem; } }
   @media (min-width: 1024px) {
     .project {
-      height: 20rem; } }
+      height: 20rem;
+      font-size: 1.5rem; } }
+
+.project-content {
+  padding: 2rem 2rem 0; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .project-content {
+      padding: 2rem 2rem 0; } }
+  @media (min-width: 1024px) {
+    .project-content {
+      padding: 3rem 3rem 0; } }
 
 .writing {
   justify-content: center;
@@ -130,7 +173,8 @@ section {
     width: 55%; } }
 
 .blogposts-heading {
-  padding-bottom: 1.5rem; }
+  padding-bottom: 1.5rem;
+  color: #2ecc71; }
   .blogposts-heading i {
     padding-right: 1rem;
     font-size: 2rem; }
@@ -163,13 +207,17 @@ section {
     .blogposts {
       font-size: 1.5rem; } }
 
+.blogpost:hover {
+  text-decoration: underline; }
+
+.blog-button {
+  margin: 2rem 0; }
+
 body {
   display: flex;
   flex-flow: row wrap;
   font-family: "Open Sans", sans-serif; }
 
 a {
-  text-decoration: none;
-  color: #2ecc71; }
-  a:hover {
-    text-decoration: underline; }
+  color: #2ecc71;
+  text-decoration: none; }

@@ -24,6 +24,8 @@
 .blogposts-heading {
     padding-bottom: 1.5rem;
 
+    color: $primary-color;
+
     i {
         padding-right: 1rem;
 
@@ -74,4 +76,12 @@
     @include desktop {
         font-size: $desktop-font-scale;
     }
+}
+
+.blogpost:hover {
+    text-decoration: underline;
+}
+
+.blog-button {
+    margin: 2rem 0;
 }
