@@ -1,13 +1,13 @@
 .writing {
     justify-content: center;
 
-    padding: 3rem;
+    padding: 3rem 3rem 1rem;
 
     background: $white;
     color: $primary-color;
 
     @include desktop {
-        padding: 5rem 0;
+        padding: 5rem 0 3rem;
     }
 }
 
@@ -23,8 +23,6 @@
 
 .blogposts-heading {
     padding-bottom: 1.5rem;
-
-    color: $primary-color;
 
     i {
         padding-right: 1rem;

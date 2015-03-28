@@ -13,11 +13,11 @@
       font-size: 1.2rem; } }
 
 .btn-solid {
-  background: #2ecc71;
+  background: #3498db;
   border: none;
   color: white; }
   .btn-solid:hover {
-    background: #54d98c; }
+    background: #5faee3; }
 
 .btn-clear {
   background: transparent;
@@ -31,7 +31,7 @@ header {
   flex-flow: row wrap;
   flex: 1 100%;
   padding: 2rem;
-  background: #2ecc71;
+  background: #3498db;
   color: white; }
   @media (min-width: 1024px) {
     header {
@@ -68,7 +68,7 @@ div.browser-content {
   align-items: center;
   justify-content: center; }
   div.browser-content i {
-    color: #2ecc71;
+    color: #3498db;
     font-size: 8rem; }
   @media (min-width: 1024px) {
     div.browser-content i {
@@ -98,7 +98,7 @@ section {
 
 .intro {
   justify-content: center;
-  padding: 3rem;
+  padding: 3rem 2rem;
   background: white;
   color: #7f8c8d; }
   @media (min-width: 1024px) {
@@ -120,7 +120,6 @@ section {
 
 .project {
   flex: 1 100%;
-  height: 17rem;
   color: white;
   font-size: 1.2rem; }
   .project h3 {
@@ -130,25 +129,28 @@ section {
   .project:nth-child(2) {
     background: #e74c3c; }
   .project:nth-child(3) {
-    background: #34495e; }
+    background: #e67e22; }
   .project:nth-child(4) {
     background: #f1c40f; }
   .project:nth-child(5) {
-    background: #e67e22; }
+    background: #34495e; }
   .project:nth-child(6) {
-    background: #3498db; }
+    background: #2ecc71; }
   @media (min-width: 768px) {
     .project {
       flex: 1 50%;
-      height: 19rem;
+      height: 24rem;
       font-size: 1.4rem; } }
   @media (min-width: 1024px) {
     .project {
-      height: 20rem;
+      height: 27rem;
       font-size: 1.5rem; } }
+  @media (min-width: 1280px) {
+    .project {
+      height: 23rem; } }
 
 .project-content {
-  padding: 2rem 2rem 0; }
+  padding: 2rem; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .project-content {
       padding: 2rem 2rem 0; } }
@@ -156,14 +158,17 @@ section {
     .project-content {
       padding: 3rem 3rem 0; } }
 
+.tech {
+  font-weight: 700; }
+
 .writing {
   justify-content: center;
-  padding: 3rem;
+  padding: 3rem 3rem 1rem;
   background: white;
-  color: #2ecc71; }
+  color: #3498db; }
   @media (min-width: 1024px) {
     .writing {
-      padding: 5rem 0; } }
+      padding: 5rem 0 3rem; } }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .blogposts-wrapper {
@@ -173,8 +178,7 @@ section {
     width: 55%; } }
 
 .blogposts-heading {
-  padding-bottom: 1.5rem;
-  color: #2ecc71; }
+  padding-bottom: 1.5rem; }
   .blogposts-heading i {
     padding-right: 1rem;
     font-size: 2rem; }
@@ -219,5 +223,5 @@ body {
   font-family: "Open Sans", sans-serif; }
 
 a {
-  color: #2ecc71;
+  color: #3498db;
   text-decoration: none; }

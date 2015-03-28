@@ -1,5 +1,6 @@
 $tablet-width: 768px;
 $desktop-width: 1024px;
+$large-desktop-width: 1280px;
 
 @mixin tablet {
   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
@@ -15,6 +16,12 @@ $desktop-width: 1024px;
 
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: #{$large-desktop-width}) {
     @content;
   }
 }

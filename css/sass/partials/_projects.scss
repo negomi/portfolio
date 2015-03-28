@@ -1,6 +1,5 @@
 .project {
     flex: 1 100%;
-    height: 17rem;
 
     color: $white;
     font-size: $mobile-font-scale;
@@ -18,7 +17,7 @@
     }
 
     &:nth-child(3) {
-        background: $wet-asphalt;
+        background: $carrot;
     }
 
     &:nth-child(4) {
@@ -26,29 +25,33 @@
     }
 
     &:nth-child(5) {
-        background: $carrot;
+        background: $wet-asphalt;
     }
 
     &:nth-child(6) {
-        background: $peter-river;
+        background: $emerald;
     }
 
     @include tablet-up {
         flex: 1 50%;
-        height: 19rem;
+        height: 24rem;
 
         font-size: $tablet-font-scale;
     }
 
     @include desktop {
-        height: 20rem;
+        height: 27rem;
 
         font-size: $desktop-font-scale;
+    }
+
+    @include large-desktop {
+        height: 23rem;
     }
 }
 
 .project-content {
-    padding: 2rem 2rem 0;
+    padding: 2rem;
 
     @include tablet {
         padding: 2rem 2rem 0;
@@ -57,4 +60,8 @@
     @include desktop {
         padding: 3rem 3rem 0;
     }
+}
+
+.tech {
+    font-weight: 700;
 }
