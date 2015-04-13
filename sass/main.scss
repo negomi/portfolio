@@ -35,13 +35,13 @@ $secondary-color: $asbestos;
 @import 'partials/writing.scss';
 
 body {
-    display: flex;
-    flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 
-    font-family: $primary-font;
+  font-family: $primary-font;
 }
 
 a {
-    color: $primary-color;
-    text-decoration: none;
+  color: $primary-color;
+  text-decoration: none;
 }
