@@ -13,16 +13,16 @@
       font-size: 1.2rem; } }
 
 .btn-solid {
-  background: #3498db;
+  background: #3498DB;
   border: none;
-  color: white; }
+  color: #FFF; }
   .btn-solid:hover {
     background: #5faee3; }
 
 .btn-clear {
   background: transparent;
-  border: 4px solid white;
-  color: white; }
+  border: 4px solid #FFF;
+  color: #FFF; }
   .btn-clear:hover {
     background: rgba(255, 255, 255, 0.1); }
 
@@ -31,8 +31,8 @@ header {
   flex-flow: row wrap;
   flex: 1 100%;
   padding: 2rem;
-  background: #3498db;
-  color: white; }
+  background: #3498DB;
+  color: #FFF; }
   @media (min-width: 1024px) {
     header {
       padding: 4rem 0 2rem; } }
@@ -68,7 +68,7 @@ div.browser-content {
   align-items: center;
   justify-content: center; }
   div.browser-content i {
-    color: #3498db;
+    color: #3498DB;
     font-size: 8rem; }
   @media (min-width: 1024px) {
     div.browser-content i {
@@ -89,7 +89,7 @@ div.browser-content {
 
 .header-link {
   padding: 0 0.4rem;
-  color: white; }
+  color: #FFF; }
 
 section {
   display: flex;
@@ -99,8 +99,8 @@ section {
 .intro {
   justify-content: center;
   padding: 3rem 2rem;
-  background: white;
-  color: #7f8c8d; }
+  background: #FFF;
+  color: #7F8C8D; }
   @media (min-width: 1024px) {
     .intro {
       padding: 5rem 0; } }
@@ -120,22 +120,22 @@ section {
 
 .project {
   flex: 1 100%;
-  color: white;
+  color: #FFF;
   font-size: 1.2rem; }
   .project h3 {
     margin-top: 0; }
   .project:nth-child(1) {
-    background: #9b59b6; }
+    background: #9B59B6; }
   .project:nth-child(2) {
-    background: #e74c3c; }
+    background: #E74C3C; }
   .project:nth-child(3) {
-    background: #e67e22; }
+    background: #E67E22; }
   .project:nth-child(4) {
-    background: #f1c40f; }
+    background: #F1C40F; }
   .project:nth-child(5) {
-    background: #34495e; }
+    background: #34495E; }
   .project:nth-child(6) {
-    background: #2ecc71; }
+    background: #2ECC71; }
   @media (min-width: 768px) {
     .project {
       flex: 1 50%;
@@ -164,8 +164,8 @@ section {
 .writing {
   justify-content: center;
   padding: 3rem 3rem 1rem;
-  background: white;
-  color: #3498db; }
+  background: #FFF;
+  color: #3498DB; }
   @media (min-width: 1024px) {
     .writing {
       padding: 5rem 0 3rem; } }
@@ -173,6 +173,7 @@ section {
 @media (min-width: 768px) and (max-width: 1023px) {
   .blogposts-wrapper {
     width: 75%; } }
+
 @media (min-width: 1024px) {
   .blogposts-wrapper {
     width: 55%; } }
@@ -223,5 +224,5 @@ body {
   font-family: "Open Sans", sans-serif; }
 
 a {
-  color: #3498db;
+  color: #3498DB;
   text-decoration: none; }
