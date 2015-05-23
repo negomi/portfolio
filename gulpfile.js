@@ -40,6 +40,7 @@ gulp.task('styles', function() {
 gulp.task('watch', function() {
   gulp.watch('js/**/*.js', ['lint', 'scripts']);
   gulp.watch('sass/**/*.scss', ['sass']);
+  gulp.watch('css/main.css', ['styles']);
 });
 
 gulp.task('connect', function() {

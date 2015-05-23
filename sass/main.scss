@@ -1,7 +1,7 @@
 $primary-font: 'Open Sans', sans-serif;
 $mobile-font-scale: 1.2rem;
 $tablet-font-scale: 1.4rem;
-$desktop-font-scale: 1.5rem;
+$desktop-font-scale: 1.6rem;
 
 $white: #FFF;
 $clouds: #ECF0F1;
@@ -23,25 +23,22 @@ $midnight-blue: #2C3E50;
 $amethyst: #9B59B6;
 $wisteria: #8E44AD;
 
-$primary-color: $peter-river;
-$secondary-color: $asbestos;
-
-@import 'partials/mixins.scss';
-@import 'partials/buttons.scss';
-@import 'partials/header.scss';
-@import 'partials/sections.scss';
-@import 'partials/intro.scss';
-@import 'partials/projects.scss';
-@import 'partials/writing.scss';
+$primary-color: $belize-hole;
+$secondary-color: $clouds;
 
 body {
-  display: flex;
-  flex-flow: row wrap;
-
   font-family: $primary-font;
+  font-size: $mobile-font-scale;
 }
 
 a {
   color: $primary-color;
   text-decoration: none;
 }
+
+@import 'partials/mixins.scss';
+@import 'partials/buttons.scss';
+@import 'partials/header.scss';
+@import 'partials/sections.scss';
+@import 'partials/projects.scss';
+@import 'partials/writing.scss';

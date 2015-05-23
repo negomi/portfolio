@@ -1,94 +1,50 @@
 header {
-    display: flex;
-    flex-flow: row wrap;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
 
-    flex: 1 100%;
+  padding: 2rem;
 
-    padding: 2rem;
+  background: $secondary-color;
+  color: $primary-color;
 
-    background: $primary-color;
-    color: $white;
+  h1, h2 {
+    margin: 0;
+  }
 
-    @include desktop {
-        padding: 4rem 0 2rem;
-    }
-}
+  @include tablet-up {
+    padding: 4rem;
+    font-size: $tablet-font-scale;
+  }
 
-.header-image-wrapper {
-    display: none;
-
-    @include tablet-up {
-        display: flex;
-        justify-content: flex-end;
-
-        flex: 1 50%;
-    }
-}
-
-.header-text-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    flex: 1 100%;
-
-    text-align: center;
-
-    @include tablet-up {
-        justify-content: flex-start;
-
-        flex: 1 50%;
-
-        text-align: left;
-    }
-}
-
-.header-image {
-    height: 19rem;
-    width: 25rem;
-
-    margin-right: 2rem;
-}
-
-div.browser-content {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-
-    i {
-        color: $primary-color;
-        font-size: 8rem;
-    }
-
-    @include desktop {
-        i {
-            font-size: 10rem;
-        }
-    }
-}
-
-.header-text {
+  @include desktop {
     font-size: $desktop-font-scale;
+  }
+}
 
-    h1, h2 {
-        margin: 0;
-    }
+.header-icon {
+  margin-bottom: 1rem;
+  font-size: 6rem;
+
+  @include desktop {
+    font-size: 8rem;
+  }
 }
 
 .header-links {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
-    justify-content: center;
-
-    flex: 1 100%;
-
-    height: 5rem;
+  margin-top: 2rem;
+  font-size: initial;
 }
 
 .header-link {
-    padding: 0 0.4rem;
+  padding: 0 0.4rem;
+  color: $primary-color;
 
-    color: $white;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+
+  &:hover {
+      color: darken($primary-color, 10%);
+  }
 }

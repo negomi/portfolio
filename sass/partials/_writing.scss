@@ -1,85 +1,74 @@
 .writing {
+  background: $secondary-color;
+  color: $primary-color;
+
+  @include tablet-up {
     justify-content: center;
-
-    padding: 3rem 3rem 1rem;
-
-    background: $white;
-    color: $primary-color;
-
-    @include desktop {
-        padding: 5rem 0 3rem;
-    }
+  };
 }
 
 .blogposts-wrapper {
-    @include tablet {
-        width: 75%;
-    }
+  padding-bottom: 1rem;
 
-    @include desktop {
-        width: 55%;
-    }
+  @include tablet {
+    width: 75%;
+  }
+
+  @include desktop {
+    width: 55%;
+    padding: 2rem 4rem 3rem;
+  }
 }
 
 .blogposts-heading {
-    padding-bottom: 1.5rem;
+  margin: 1em 0;
 
+  i {
+    padding-right: 1rem;
+    font-size: 2rem;
+  }
+
+  h3 {
+    display: inline;
+    font-size: 1.5rem;
+  }
+
+  @include tablet {
     i {
-        padding-right: 1rem;
-
-        font-size: 2rem;
+      font-size: 2.3rem;
     }
 
     h3 {
-        margin: 0;
+      font-size: 1.8rem;
+    }
+  }
 
-        display: inline;
-        font-size: 1.5rem;
+  @include desktop {
+    i {
+      font-size: 2.5rem;
     }
 
-    @include tablet {
-        i {
-            font-size: 2.3rem;
-        }
-
-        h3 {
-            font-size: 1.8rem;
-        }
+    h3 {
+      font-size: 2rem;
     }
-
-    @include desktop {
-        padding-bottom: 2rem;
-
-        i {
-            font-size: 2.5rem;
-        }
-
-        h3 {
-            font-size: 2rem;
-        }
-    }
+  }
 }
 
 .blogposts {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    font-size: $mobile-font-scale;
-
-    @include tablet {
-        font-size: $tablet-font-scale;
-    }
-
-    @include desktop {
-        font-size: $desktop-font-scale;
-    }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .blogpost:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .blog-button {
-    margin: 2rem 0;
+  @include btn-solid($primary-color);
+  margin-top: 2rem;
+
+  @include tablet-up {
+    margin-bottom: 2rem;
+  }
 }

@@ -1,67 +1,42 @@
 .project {
-    flex: 1 100%;
+  &:nth-of-type(odd) {
+    color: $primary-color;
+    background: $white;
 
+    .project-button {
+      @include btn-clear($primary-color);
+    }
+  }
+
+  &:nth-of-type(even) {
     color: $white;
-    font-size: $mobile-font-scale;
+    background: $primary-color;
 
-    h3 {
-        margin-top: 0;
+    .project-button {
+      @include btn-clear($white);
     }
-
-    &:nth-child(1) {
-        background: $amethyst;
-    }
-
-    &:nth-child(2) {
-        background: $alizarin;
-    }
-
-    &:nth-child(3) {
-        background: $carrot;
-    }
-
-    &:nth-child(4) {
-        background: $sun-flower;
-    }
-
-    &:nth-child(5) {
-        background: $wet-asphalt;
-    }
-
-    &:nth-child(6) {
-        background: $emerald;
-    }
-
-    @include tablet-up {
-        flex: 1 50%;
-        height: 24rem;
-
-        font-size: $tablet-font-scale;
-    }
-
-    @include desktop {
-        height: 27rem;
-
-        font-size: $desktop-font-scale;
-    }
-
-    @include large-desktop {
-        height: 23rem;
-    }
+  }
 }
 
-.project-content {
-    padding: 2rem;
+.project-description,
+.project-image {
+  @include tablet-up {
+    flex: 50%;
+  }
 
-    @include tablet {
-        padding: 2rem 2rem 0;
-    }
+  @include desktop {
+    padding: 2rem 4rem 3rem;
+  };
+}
 
-    @include desktop {
-        padding: 3rem 3rem 0;
-    }
+.project-image {
+  display: none;
+
+  @include tablet-up {
+    display: block;
+  }
 }
 
 .tech {
-    font-weight: 700;
+  font-weight: 700;
 }

@@ -1,6 +1,13 @@
 section {
-    display: flex;
-    flex-flow: row wrap;
+  display: flex;
 
-    flex: 1 100%;
+  padding: 2rem;
+
+  @include tablet {
+    font-size: $tablet-font-scale;
+  }
+
+  @include desktop {
+    font-size: $desktop-font-scale;
+  }
 }
