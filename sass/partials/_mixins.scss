@@ -54,10 +54,10 @@ $large-desktop-width: 1280px;
   transition: background-color 0.5s;
 
   background: $color;
-  border: none;
+  border-bottom: 4px solid darken($color, 10%);
   color: $white;
 
   &:hover {
-      background: darken($color, 10%);
+      background: darken($color, 5%);
   }
 }
