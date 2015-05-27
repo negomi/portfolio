@@ -2,8 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:400,700" rel="stylesheet" type="text/css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="bower_components/minimal-devices/css/iphone.css" rel="stylesheet" type="text/css">
+    <link href="bower_components/minimal-devices/css/macbook.css" rel="stylesheet" type="text/css">
     <link href="css/all.min.css" rel="stylesheet" type="text/css">
     <title>Imogen Wentworth | portfolio</title>
   </head>
@@ -20,37 +22,64 @@
       </div>
     </header>
 
-    <section class="project">
-      <div class="project-description">
-        <h3>scrollAway.js</h3>
-        <p>A simple jQuery plugin that hides elements on scroll down, and reveals them on scroll up.</p>
-        <p><span class="tech">Tech:</span> JavaScript, jQuery, QUnit</p>
-        <a href="http://negomi.github.io/scrollaway/" target="_blank" class="project-button">View</a>
-      </div>
-      <div class="project-image">
-
-      </div>
-    </section>
-    <section class="project">
-      <div class="project-image">
-
-      </div>
+    <section class="project" id="bikestash">
       <div class="project-description">
         <h3>BikeStash</h3>
         <p>A visualization of public bike parking facilities in San Francisco.</p>
         <p><span class="tech">Tech:</span> Leaflet, ES6</p>
-        <a href="http://negomi.github.io/bikestash/" target="_blank" class="project-button">View</a>
+        <a href="http://negomi.github.io/bikestash/" target="_blank" class="project-button">Project</a>
+        <a href="https://github.com/negomi/bikestash" target="_blank" class="project-button">Code</a>
+      </div>
+      <div class="project-image-container">
+        <a href="http://negomi.github.io/bikestash/" target="_blank">
+          <div class="project-image md-macbook-pro slideLeft">
+            <div class="md-lid">
+              <div class="md-camera"></div>
+              <div class="md-screen">
+                <img src="img/bikestash.png" alt="BikeStash screenshot" />
+              </div>
+            </div>
+            <div class="md-base"></div>
+          </div>
+        </a>
       </div>
     </section>
-    <section class="project">
+
+    <section class="project" id="scrollaway">
+      <div class="project-image-container">
+          <div class="project-image md-iphone-5 md-white-device slideDown">
+            <a href="http://negomi.github.io/scrollaway/" target="_blank">
+              <div class="md-body">
+                <div class="md-buttons"></div>
+                <div class="md-front-camera"></div>
+                <div class="md-top-speaker"></div>
+                    <div class="md-screen">
+                        <iframe src="http://negomi.github.io/scrollaway/" width="256px" height="454px"></iframe>
+                    </div>
+                <button class="md-home-button"></button>
+              </div>
+            </a>
+          </div>
+      </div>
+      <div class="project-description">
+        <h3>scrollAway.js</h3>
+        <p>A simple jQuery plugin that hides elements on scroll down, and reveals them on scroll up.</p>
+        <p><span class="tech">Tech:</span> JavaScript, jQuery, QUnit</p>
+        <a href="http://negomi.github.io/scrollaway/" target="_blank" class="project-button">Demo</a>
+        <a href="https://github.com/negomi/scrollaway" target="_blank" class="project-button">Code</a>
+      </div>
+    </section>
+
+    <section class="project" id="sassyInputs">
       <div class="project-description">
         <h3>Sassy Inputs</h3>
         <p>Flat, customisable CSS3 alternatives to radio buttons and checkboxes.</p>
         <p><span class="tech">Tech:</span> Sass</p>
-        <a href="http://negomi.github.io/sassy-inputs/" target="_blank" class="project-button">View</a>
+        <a href="http://negomi.github.io/sassy-inputs/" target="_blank" class="project-button">Demo</a>
+        <a href="https://github.com/negomi/sassy-inputs" target="_blank" class="project-button">Code</a>
       </div>
-      <div class="project-image">
-
+      <div class="project-image-container">
+        <a href="http://negomi.github.io/sassy-inputs/" target="_blank" class="project-image project-logo--sassy-inputs expandUp">Sassy Inputs</a>
       </div>
     </section>
 
@@ -68,6 +97,6 @@
       </div>
     </section>
 
-    <script src="js/all.min.js" type="text/javascript"></script>
+    <script src="js/main.min.js" type="text/javascript"></script>
   </body>
 </html>

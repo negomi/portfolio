@@ -6,6 +6,9 @@ a {
   color: #2980B9;
   text-decoration: none; }
 
+iframe {
+  border: none; }
+
 .btn, .project:nth-of-type(odd) .project-button, .project:nth-of-type(even) .project-button, .blog-button {
   display: inline-block;
   padding: 0.6rem 1.5rem;
@@ -65,75 +68,108 @@ section {
       font-size: 1.4rem; } }
   @media (min-width: 1024px) {
     section {
-      padding: 2rem 4rem;
       font-size: 1.6rem; } }
 
-.project:nth-of-type(odd) {
-  color: #2980B9;
-  background: #FFF; }
-  .project:nth-of-type(odd) .project-button {
-    -webkit-transition: background-color 0.5s;
-    transition: background-color 0.5s;
-    background: transparent;
-    border: 4px solid #2980B9;
-    color: #2980B9; }
-    .project:nth-of-type(odd) .project-button:hover {
-      background: rgba(41, 128, 185, 0.1); }
+.project {
+  overflow: hidden; }
+  .project:nth-of-type(odd) {
+    color: #2980B9;
+    background: #FFF; }
+    .project:nth-of-type(odd) .project-button {
+      -webkit-transition: background-color 0.5s;
+      transition: background-color 0.5s;
+      background: transparent;
+      border: 4px solid #2980B9;
+      color: #2980B9; }
+      .project:nth-of-type(odd) .project-button:hover {
+        background: rgba(41, 128, 185, 0.1); }
+  .project:nth-of-type(even) {
+    color: #FFF;
+    background: #2980B9; }
+    .project:nth-of-type(even) .project-button {
+      -webkit-transition: background-color 0.5s;
+      transition: background-color 0.5s;
+      background: transparent;
+      border: 4px solid #FFF;
+      color: #FFF; }
+      .project:nth-of-type(even) .project-button:hover {
+        background: rgba(255, 255, 255, 0.1); }
 
-.project:nth-of-type(even) {
-  color: #FFF;
-  background: #2980B9; }
-  .project:nth-of-type(even) .project-button {
-    -webkit-transition: background-color 0.5s;
-    transition: background-color 0.5s;
-    background: transparent;
-    border: 4px solid #FFF;
-    color: #FFF; }
-    .project:nth-of-type(even) .project-button:hover {
-      background: rgba(255, 255, 255, 0.1); }
+@media (min-width: 768px) {
+  .project-description,
+  .project-image-container {
+    flex: 50%; } }
 
 @media (min-width: 1024px) {
   .project-description,
-  .project-image {
-    flex: 50%;
-    padding: 4rem 2rem; } }
+  .project-image-container {
+    padding: 2rem 4rem 3rem; } }
 
-.project-image {
+.project-image-container {
+  position: relative;
   display: none; }
   @media (min-width: 768px) {
-    .project-image {
-      display: block; } }
+    .project-image-container {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .project-image-container .project-image {
+        display: none; } }
 
 .tech {
   font-weight: 700; }
 
+.md-macbook-pro {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.md-iphone-5 {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0; }
+
+.md-iphone-5 {
+  font-size: 0.5em; }
+  .md-iphone-5 .md-screen {
+    background-color: transparent; }
+
+.md-macbook-pro {
+  font-size: 0.2em; }
+
+.project-logo--sassy-inputs {
+  white-space: nowrap;
+  color: coral;
+  font-family: 'Pacifico';
+  font-size: 300%; }
+
 .writing {
-  justify-content: center;
-  padding: 3rem 2rem 1rem;
   background: #ECF0F1;
   color: #2980B9; }
+  @media (min-width: 768px) {
+    .writing {
+      justify-content: center; } }
+
+.blogposts-wrapper {
+  padding-bottom: 1rem; }
   @media (min-width: 768px) and (max-width: 1023px) {
-    .writing {
-      padding: 3rem 2rem 2rem; } }
+    .blogposts-wrapper {
+      width: 75%; } }
   @media (min-width: 1024px) {
-    .writing {
-      padding: 4rem 2rem; } }
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .blogposts-wrapper {
-    width: 75%; } }
-
-@media (min-width: 1024px) {
-  .blogposts-wrapper {
-    width: 55%; } }
+    .blogposts-wrapper {
+      width: 55%;
+      padding: 2rem 4rem 3rem; } }
 
 .blogposts-heading {
-  padding-bottom: 1.5rem; }
+  margin: 1em 0; }
   .blogposts-heading i {
     padding-right: 1rem;
     font-size: 2rem; }
   .blogposts-heading h3 {
-    margin: 0;
     display: inline;
     font-size: 1.5rem; }
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -142,12 +178,10 @@ section {
     .blogposts-heading h3 {
       font-size: 1.8rem; } }
   @media (min-width: 1024px) {
-    .blogposts-heading {
-      padding-bottom: 2rem; }
-      .blogposts-heading i {
-        font-size: 2.5rem; }
-      .blogposts-heading h3 {
-        font-size: 2rem; } }
+    .blogposts-heading i {
+      font-size: 2.5rem; }
+    .blogposts-heading h3 {
+      font-size: 2rem; } }
 
 .blogposts {
   list-style-type: none;
@@ -163,6 +197,9 @@ section {
   background: #2980B9;
   border: none;
   color: #FFF;
-  margin: 2rem 0; }
+  margin-top: 2rem; }
   .blog-button:hover {
     background: #20638f; }
+  @media (min-width: 768px) {
+    .blog-button {
+      margin-bottom: 2rem; } }

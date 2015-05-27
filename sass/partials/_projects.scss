@@ -1,4 +1,6 @@
 .project {
+  overflow: hidden;
+
   &:nth-of-type(odd) {
     color: $primary-color;
     background: $white;
@@ -19,7 +21,7 @@
 }
 
 .project-description,
-.project-image {
+.project-image-container {
   @include tablet-up {
     flex: 50%;
   }
@@ -29,14 +31,58 @@
   };
 }
 
-.project-image {
+.project-image-container {
+  position: relative;
   display: none;
 
   @include tablet-up {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .project-image {
+      display: none;
+    }
   }
 }
 
 .tech {
   font-weight: 700;
+}
+
+%center--absolute {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+%center--horizontal {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.md-iphone-5 {
+  @extend %center--horizontal;
+  font-size: 0.5em;
+
+  .md-screen {
+    background-color: transparent;
+  }
+}
+
+.md-macbook-pro {
+  @extend %center--absolute;
+  font-size: 0.2em;
+}
+
+.project-logo--sassy-inputs {
+  white-space: nowrap;
+  color: coral;
+  font-family: 'Pacifico';
+  font-size: 300%;
 }

@@ -2,3 +2,4 @@
 node_modules/
 .DS_Store
 css/*.css
+js/main.min.js

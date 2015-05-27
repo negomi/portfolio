@@ -36,6 +36,10 @@ a {
   text-decoration: none;
 }
 
+iframe {
+  border: none;
+}
+
 @import 'partials/mixins.scss';
 @import 'partials/buttons.scss';
 @import 'partials/header.scss';

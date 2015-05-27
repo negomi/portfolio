@@ -1,0 +1,37 @@
+{
+  "name": "minimal-devices",
+  "version": "0.5.6",
+  "author": "Jared Hardy",
+  "description": "Minimal HTML and CSS devices",
+  "main": [
+    "css/imac.css",
+    "css/iphone.css",
+    "css/ipad.css",
+    "css/macbook.css",
+    "templates/device_markup/imac.html",
+    "templates/device_markup/ipad.html",
+    "templates/device_markup/iphone.html",
+    "templates/device_markup/macbook.html"
+  ],
+  "ignore": [
+    "css-output/",
+    "lib/",
+    "pkg/",
+    "stylesheets/",
+    "Gemfile",
+    "Gemfile.lock",
+    "minimal-devices.gemspec",
+    "Rakefile"
+  ],
+  "homepage": "https://github.com/jhardy/minimal-devices",
+  "_release": "0.5.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.5.6",
+    "commit": "e63e944336ac611b69f78e06cc6a82e2de7b3a78"
+  },
+  "_source": "git://github.com/jhardy/minimal-devices.git",
+  "_target": "~0.5.6",
+  "_originalSource": "minimal-devices",
+  "_direct": true
+}

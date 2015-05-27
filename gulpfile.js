@@ -8,7 +8,7 @@ var rename = require('gulp-rename');
 var connect = require('gulp-connect');
 
 gulp.task('lint', function() {
-  return gulp.src('js/**/*.js')
+  return gulp.src('js/main.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
@@ -20,10 +20,8 @@ gulp.task('sass', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('js/**/*.js')
-    .pipe(concat('all.js'))
-    .pipe(gulp.dest('js'))
-    .pipe(rename('all.min.js'))
+  return gulp.src('js/main.js')
+    .pipe(rename('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('js'));
 });
@@ -47,4 +45,4 @@ gulp.task('connect', function() {
   connect.server({ livereload: true });
 });
 
-gulp.task('default', ['lint', 'sass', 'scripts', 'styles', 'watch', 'connect']);
+gulp.task('default', ['sass', 'scripts', 'styles', 'watch', 'connect']);
