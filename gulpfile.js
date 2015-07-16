@@ -5,6 +5,7 @@ var uglify = require('gulp-uglify');
 var minifyCSS = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var connect = require('gulp-connect');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
   return gulp.src('sass/**/*.scss')
@@ -15,6 +16,10 @@ gulp.task('sass', function() {
 gulp.task('styles', function() {
   return gulp.src(['css/libs/*.css', 'bower_components/minimal-devices/css/*.css', 'css/main.css'])
     .pipe(concat('all.css'))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(gulp.dest('css'))
     .pipe(rename('all.min.css'))
     .pipe(minifyCSS())

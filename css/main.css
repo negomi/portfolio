@@ -55,7 +55,6 @@ header {
 .header-link {
   padding: 0 0.4rem;
   color: #2980B9;
-  -webkit-transition: color 0.5s;
   transition: color 0.5s; }
   .header-link:hover {
     color: #20638f; }
@@ -77,7 +76,6 @@ section {
     color: #FFF;
     background: #2980B9; }
     .project:nth-of-type(odd) .project-button {
-      -webkit-transition: background-color 0.5s;
       transition: background-color 0.5s;
       background: transparent;
       border: 4px solid #FFF;
@@ -88,7 +86,6 @@ section {
     color: #2980B9;
     background: #FFF; }
     .project:nth-of-type(even) .project-button {
-      -webkit-transition: background-color 0.5s;
       transition: background-color 0.5s;
       background: transparent;
       border: 4px solid #2980B9;
@@ -141,7 +138,7 @@ section {
 
 .md-iphone-5 {
   font-size: 12.5px;
-  top: 30px; }
+  top: 2rem; }
   .md-iphone-5 .md-screen {
     background-color: transparent; }
 
@@ -158,10 +155,10 @@ section {
   white-space: nowrap;
   color: coral;
   font-family: 'Pacifico';
-  font-size: 260%; }
+  font-size: 4rem; }
   @media (min-width: 1024px) {
     .project-logo--sassy-inputs {
-      font-size: 300%; } }
+      font-size: 5rem; } }
 
 .writing {
   background: #ECF0F1;
@@ -174,11 +171,12 @@ section {
   padding-bottom: 1rem; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .blogposts-wrapper {
-      width: 75%; } }
+      width: 75%;
+      padding-bottom: 0; } }
   @media (min-width: 1024px) {
     .blogposts-wrapper {
       width: 55%;
-      padding: 2rem 4rem 3rem; } }
+      padding: 2rem 4rem 1rem; } }
 
 .blogposts-heading {
   margin: 1em 0; }
@@ -208,7 +206,6 @@ section {
   text-decoration: underline; }
 
 .blog-button {
-  -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
   background: #2980B9;
   border-bottom: 4px solid #20638f;

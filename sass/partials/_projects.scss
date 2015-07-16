@@ -74,7 +74,7 @@
 .md-iphone-5 {
   @extend %center--horizontal;
   font-size: 12.5px;
-  top: 30px;
+  top: 2rem;
 
   .md-screen {
     background-color: transparent;
@@ -102,9 +102,9 @@
   white-space: nowrap;
   color: coral;
   font-family: 'Pacifico';
-  font-size: 260%;
+  font-size: 4rem;
 
   @include desktop {
-    font-size: 300%;
+    font-size: 5rem;
   };
 }

@@ -12,11 +12,12 @@
 
   @include tablet {
     width: 75%;
+    padding-bottom: 0;
   }
 
   @include desktop {
     width: 55%;
-    padding: 2rem 4rem 3rem;
+    padding: 2rem 4rem 1rem;
   }
 }
 
