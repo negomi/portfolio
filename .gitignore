@@ -1,6 +1,5 @@
 .sass-cache/*
-node_modules/
 .DS_Store
-css/*.css
-css/*.min.css
-js/main.min.js
+node_modules/
+bower_components/
+css/

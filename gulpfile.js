@@ -10,16 +10,20 @@ var autoprefixer = require('gulp-autoprefixer');
 gulp.task('sass', function() {
   return gulp.src('sass/**/*.scss')
     .pipe(sass())
-    .pipe(gulp.dest('css'));
-});
-
-gulp.task('styles', function() {
-  return gulp.src(['css/libs/*.css', 'bower_components/minimal-devices/css/*.css', 'css/main.css'])
-    .pipe(concat('all.css'))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     }))
+    .pipe(gulp.dest('css'));
+});
+
+gulp.task('styles', function() {
+  return gulp.src([
+      'bower_components/normalize.css/normalize.css',
+      'bower_components/minimal-devices/css/*.css',
+      'css/main.css'
+    ])
+    .pipe(concat('all.css'))
     .pipe(gulp.dest('css'))
     .pipe(rename('all.min.css'))
     .pipe(minifyCSS())
