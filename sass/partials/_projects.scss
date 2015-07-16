@@ -1,16 +1,8 @@
 .project {
+  display: flex;
   overflow: hidden;
 
   &:nth-of-type(odd) {
-    color: $primary-color;
-    background: $white;
-
-    .project-button {
-      @include btn-clear($primary-color);
-    }
-  }
-
-  &:nth-of-type(even) {
     color: $white;
     background: $primary-color;
 
@@ -18,10 +10,27 @@
       @include btn-clear($white);
     }
   }
+
+  &:nth-of-type(even) {
+    color: $primary-color;
+    background: $white;
+
+    .project-button {
+      @include btn-clear($primary-color);
+    }
+
+    > div:first-child {
+      order: 2;
+    }
+  }
 }
 
 .project-description,
 .project-image-container {
+  @include tablet {
+    padding: 1rem;
+  };
+
   @include tablet-up {
     flex: 50%;
   }
@@ -39,10 +48,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    .project-image {
-      display: none;
-    }
   }
 }
 
@@ -68,7 +73,8 @@
 
 .md-iphone-5 {
   @extend %center--horizontal;
-  font-size: 0.5em;
+  font-size: 12.5px;
+  top: 30px;
 
   .md-screen {
     background-color: transparent;
@@ -76,13 +82,29 @@
 }
 
 .md-macbook-pro {
+  @include tablet {
+    left: initial;
+  }
+
+  @include desktop {
+    @extend %center--absolute;
+  }
+
+  font-size: 9px;
+}
+
+.md-imac {
   @extend %center--absolute;
-  font-size: 0.2em;
+  font-size: 7px;
 }
 
 .project-logo--sassy-inputs {
   white-space: nowrap;
   color: coral;
   font-family: 'Pacifico';
-  font-size: 300%;
+  font-size: 260%;
+
+  @include desktop {
+    font-size: 300%;
+  };
 }

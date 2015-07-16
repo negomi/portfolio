@@ -71,29 +71,37 @@ section {
       font-size: 1.6rem; } }
 
 .project {
+  display: flex;
   overflow: hidden; }
   .project:nth-of-type(odd) {
-    color: #2980B9;
-    background: #FFF; }
-    .project:nth-of-type(odd) .project-button {
-      -webkit-transition: background-color 0.5s;
-      transition: background-color 0.5s;
-      background: transparent;
-      border: 4px solid #2980B9;
-      color: #2980B9; }
-      .project:nth-of-type(odd) .project-button:hover {
-        background: rgba(41, 128, 185, 0.1); }
-  .project:nth-of-type(even) {
     color: #FFF;
     background: #2980B9; }
-    .project:nth-of-type(even) .project-button {
+    .project:nth-of-type(odd) .project-button {
       -webkit-transition: background-color 0.5s;
       transition: background-color 0.5s;
       background: transparent;
       border: 4px solid #FFF;
       color: #FFF; }
-      .project:nth-of-type(even) .project-button:hover {
+      .project:nth-of-type(odd) .project-button:hover {
         background: rgba(255, 255, 255, 0.1); }
+  .project:nth-of-type(even) {
+    color: #2980B9;
+    background: #FFF; }
+    .project:nth-of-type(even) .project-button {
+      -webkit-transition: background-color 0.5s;
+      transition: background-color 0.5s;
+      background: transparent;
+      border: 4px solid #2980B9;
+      color: #2980B9; }
+      .project:nth-of-type(even) .project-button:hover {
+        background: rgba(41, 128, 185, 0.1); }
+    .project:nth-of-type(even) > div:first-child {
+      order: 2; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .project-description,
+  .project-image-container {
+    padding: 1rem; } }
 
 @media (min-width: 768px) {
   .project-description,
@@ -112,14 +120,12 @@ section {
     .project-image-container {
       display: flex;
       align-items: center;
-      justify-content: center; }
-      .project-image-container .project-image {
-        display: none; } }
+      justify-content: center; } }
 
 .tech {
   font-weight: 700; }
 
-.md-macbook-pro {
+.md-macbook-pro, .md-imac {
   margin: auto;
   position: absolute;
   top: 0;
@@ -134,18 +140,28 @@ section {
   right: 0; }
 
 .md-iphone-5 {
-  font-size: 0.5em; }
+  font-size: 12.5px;
+  top: 30px; }
   .md-iphone-5 .md-screen {
     background-color: transparent; }
 
 .md-macbook-pro {
-  font-size: 0.2em; }
+  font-size: 9px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .md-macbook-pro {
+      left: initial; } }
+
+.md-imac {
+  font-size: 7px; }
 
 .project-logo--sassy-inputs {
   white-space: nowrap;
   color: coral;
   font-family: 'Pacifico';
-  font-size: 300%; }
+  font-size: 260%; }
+  @media (min-width: 1024px) {
+    .project-logo--sassy-inputs {
+      font-size: 300%; } }
 
 .writing {
   background: #ECF0F1;
@@ -195,11 +211,11 @@ section {
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
   background: #2980B9;
-  border: none;
+  border-bottom: 4px solid #20638f;
   color: #FFF;
   margin-top: 2rem; }
   .blog-button:hover {
-    background: #20638f; }
+    background: #2472a4; }
   @media (min-width: 768px) {
     .blog-button {
       margin-bottom: 2rem; } }
