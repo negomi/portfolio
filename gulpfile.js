@@ -14,8 +14,7 @@ gulp.task('sass', function() {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest('css'))
-    .pipe(connect.reload());
+    .pipe(gulp.dest('css'));
 });
 
 gulp.task('styles', function() {
@@ -25,13 +24,34 @@ gulp.task('styles', function() {
       'css/main.css'
     ])
     .pipe(concat('all.css'))
-    .pipe(gulp.dest('css'))
     .pipe(rename('all.min.css'))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('css'))
+    .pipe(connect.reload());
+});
+
+gulp.task('scripts', function() {
+  return gulp.src([
+      'bower_components/gsap/src/minified/TweenLite.min.js',
+      'bower_components/gsap/src/minified/easing/EasePack.min.js',
+      'scripts/rAF.js',
+      'scripts/**/*.js'
+    ])
+    .pipe(concat('all.js'))
+    .pipe(rename('all.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('js'))
+    .pipe(connect.reload());
+});
+
+gulp.task('html', function() {
+  gulp.src('index.html')
+    .pipe(connect.reload());
 });
 
 gulp.task('watch', function() {
+  gulp.watch('index.html', ['html']);
+  gulp.watch('scripts/**/*.js', ['scripts']);
   gulp.watch('sass/**/*.scss', ['sass']);
   gulp.watch('css/main.css', ['styles']);
 });
@@ -40,4 +60,4 @@ gulp.task('connect', function() {
   connect.server({ livereload: true });
 });
 
-gulp.task('default', ['sass', 'styles', 'watch', 'connect']);
+gulp.task('default', ['connect', 'watch']);
