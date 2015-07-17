@@ -5,17 +5,18 @@ header {
   align-items: center;
   text-align: center;
 
-  padding: 2rem;
+  padding: 4rem 2rem;
 
   background: $secondary-color;
   color: $primary-color;
 
   h1, h2 {
     margin: 0;
+    z-index: 1;
   }
 
   @include tablet-up {
-    padding: 4rem;
+    padding: 8rem 4rem;
     font-size: $tablet-font-scale;
   }
 
@@ -30,15 +31,6 @@ canvas {
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-.header-icon {
-  margin-bottom: 1rem;
-  font-size: 6rem;
-
-  @include desktop {
-    font-size: 8rem;
-  }
 }
 
 .header-links {
