@@ -26,6 +26,10 @@ $wisteria: #8E44AD;
 $primary-color: $belize-hole;
 $secondary-color: $clouds;
 
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
 body {
   font-family: $primary-font;
   font-size: $mobile-font-scale;
