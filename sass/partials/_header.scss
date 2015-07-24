@@ -15,6 +15,10 @@ header {
     z-index: 1;
   }
 
+  h2 {
+    color: $slate;
+  }
+
   @include tablet-up {
     padding: 8rem 4rem;
     font-size: $tablet-font-scale;

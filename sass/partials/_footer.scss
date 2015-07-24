@@ -1,0 +1,28 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 5rem;
+  font-size: 0.8rem;
+  background-color: $primary-color;
+  color: $white;
+  border-top: 1px solid $asbestos;
+
+  a {
+    font-weight: bold;
+    color: $white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include tablet-up {
+    font-size: 1rem;
+  }
+
+  @include desktop {
+    font-size: 1rem;
+  }
+}

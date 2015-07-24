@@ -22,6 +22,7 @@ $wet-asphalt: #34495E;
 $midnight-blue: #2C3E50;
 $amethyst: #9B59B6;
 $wisteria: #8E44AD;
+$slate: #333;
 
 $primary-color: $belize-hole;
 $secondary-color: $clouds;
@@ -50,3 +51,4 @@ iframe {
 @import 'partials/sections.scss';
 @import 'partials/projects.scss';
 @import 'partials/writing.scss';
+@import 'partials/footer.scss';
