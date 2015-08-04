@@ -42,7 +42,7 @@ $large-desktop-width: 1280px;
   color: $color;
 
   &:hover {
-      background: transparentize($color, 0.9);
+    background: transparentize($color, 0.9);
   }
 }
 
@@ -56,6 +56,6 @@ $large-desktop-width: 1280px;
   color: $white;
 
   &:hover {
-      background: darken($color, 5%);
+    background: darken($color, 5%);
   }
 }
