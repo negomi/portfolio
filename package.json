@@ -15,7 +15,7 @@
   "homepage": "https://github.com/negomi/portfolio#readme",
   "devDependencies": {
     "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.3.1",
+    "gulp-autoprefixer": "^3.0.1",
     "gulp-concat": "^2.5.2",
     "gulp-connect": "^2.2.0",
     "gulp-jshint": "^1.11.0",
