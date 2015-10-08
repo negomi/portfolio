@@ -73,7 +73,8 @@ gulp.task('deploy', ['scripts', 'sass', 'styles'], function() {
     'css/all.min.css',
     'img/*',
     'fonts/*',
-    'index.html'
+    'index.html',
+    'favicon.ico'
   ], { base: './' })
     .pipe(ghPages());
 });
