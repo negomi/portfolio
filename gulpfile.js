@@ -61,14 +61,14 @@ gulp.task('connect', function() {
   connect.server({ livereload: true });
 });
 
-gulp.task('deploy', function() {
+gulp.task('deploy', ['scripts', 'sass', 'styles'], function() {
   gulp.src([
     'js/all.min.js',
     'css/all.min.css',
+    'img/*',
     'index.html'
-  ])
-  .pipe(ghPages());
+  ], { base: './' })
+    .pipe(ghPages());
 });
 
 gulp.task('default', ['connect', 'watch']);
-gulp.task('deploy', ['scripts', 'sass', 'styles']);
