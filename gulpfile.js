@@ -18,9 +18,10 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('styles', function() {
+gulp.task('styles', ['fonts'], function() {
   return gulp.src([
       'bower_components/normalize.css/normalize.css',
+      'bower_components/font-awesome/css/font-awesome.css',
       'bower_components/minimal-devices/css/*.css',
       'css/main.css'
     ])
@@ -29,6 +30,11 @@ gulp.task('styles', function() {
     .pipe(minifyCSS())
     .pipe(gulp.dest('css'))
     .pipe(connect.reload());
+});
+
+gulp.task('fonts', function() {
+  gulp.src('bower_components/font-awesome/fonts/*')
+    .pipe(gulp.dest('fonts'));
 });
 
 gulp.task('scripts', function() {
@@ -66,6 +72,7 @@ gulp.task('deploy', ['scripts', 'sass', 'styles'], function() {
     'js/all.min.js',
     'css/all.min.css',
     'img/*',
+    'fonts/*',
     'index.html'
   ], { base: './' })
     .pipe(ghPages());
