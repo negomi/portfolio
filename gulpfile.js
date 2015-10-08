@@ -6,6 +6,7 @@ var minifyCSS = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var connect = require('gulp-connect');
 var autoprefixer = require('gulp-autoprefixer');
+var ghPages = require('gulp-gh-pages');
 
 gulp.task('sass', function() {
   return gulp.src('sass/**/*.scss')
@@ -60,4 +61,14 @@ gulp.task('connect', function() {
   connect.server({ livereload: true });
 });
 
+gulp.task('deploy', function() {
+  gulp.src([
+    'js/all.min.js',
+    'css/all.min.css',
+    'index.html'
+  ])
+  .pipe(ghPages());
+});
+
 gulp.task('default', ['connect', 'watch']);
+gulp.task('deploy', ['scripts', 'sass', 'styles']);
