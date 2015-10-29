@@ -59,8 +59,9 @@ var Animation = (function() {
       window.addEventListener('mousemove', mouseMove);
     }
 
-    window.addEventListener('scroll', scrollCheck);
     window.addEventListener('resize', resize);
+    window.addEventListener('scroll', animateCheck);
+    document.addEventListener('visibilitychange', animateCheck);
   }
 
   function mouseMove(e) {
@@ -78,8 +79,12 @@ var Animation = (function() {
     target.y = posY;
   }
 
-  function scrollCheck() {
-    animateHeader = document.body.scrollTop > height ? false : true;
+  function animateCheck() {
+    if (document.hidden || document.body.scrollTop > height) {
+      animateHeader = false;
+    } else {
+      animateHeader = true;
+    }
   }
 
   function resize() {
