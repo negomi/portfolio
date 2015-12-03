@@ -5,7 +5,7 @@ var Animation = (function() {
   function initHeader() {
     largeHeader = document.getElementById('header');
 
-    width = window.innerWidth;
+    width = window.getComputedStyle(largeHeader).width.slice(0, -2);
     height = window.getComputedStyle(largeHeader).height.slice(0, -2);
     target = { x: width / 2, y: height / 2 };
 
@@ -61,7 +61,7 @@ var Animation = (function() {
   }
 
   function resize() {
-    width = window.innerWidth;
+    width = window.getComputedStyle(largeHeader).width.slice(0, -2);
     height = window.getComputedStyle(largeHeader).height.slice(0, -2);
     canvas.width = width;
     canvas.height = height;
