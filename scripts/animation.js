@@ -16,10 +16,10 @@ var Animation = (function() {
 
     // Create points.
     points = [];
-    for (var x = 0; x < width; x = x + width / 20) {
-      for (var y = 0; y < height; y = y + height / 20) {
-        var px = x + Math.random() * width / 20;
-        var py = y + Math.random() * height / 20;
+    for (var x = 0; x < width; x += 72) {
+      for (var y = 0; y < height; y += 25) {
+        var px = x + Math.random() * 72;
+        var py = y + Math.random() * 25;
         var p = { x: px, originX: px, y: py, originY: py };
         points.push(p);
       }
@@ -55,28 +55,17 @@ var Animation = (function() {
   }
 
   function addListeners() {
-    if (!('ontouchstart' in window)) {
-      window.addEventListener('mousemove', mouseMove);
-    }
-
     window.addEventListener('resize', resize);
     window.addEventListener('scroll', animateCheck);
     document.addEventListener('visibilitychange', animateCheck);
   }
 
-  function mouseMove(e) {
-    var posX = 0, posY = 0;
-
-    if (e.pageX || e.pageY) {
-      posX = e.pageX;
-      posY = e.pageY;
-    } else if (e.clientX || e.clientY) {
-      posX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-      posY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
-    }
-
-    target.x = posX;
-    target.y = posY;
+  function resize() {
+    width = window.innerWidth;
+    height = window.getComputedStyle(largeHeader).height.slice(0, -2);
+    canvas.width = width;
+    canvas.height = height;
+    target = { x: width / 2, y: height / 2 };
   }
 
   function animateCheck() {
@@ -85,13 +74,6 @@ var Animation = (function() {
     } else {
       animateHeader = true;
     }
-  }
-
-  function resize() {
-    width = window.innerWidth;
-    height = window.getComputedStyle(largeHeader).height.slice(0, -2);
-    canvas.width = width;
-    canvas.height = height;
   }
 
   function initAnimation() {
