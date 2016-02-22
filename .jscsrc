@@ -1,5 +1,6 @@
 {
-	"preset": "airbnb",
-	"disallowMultipleVarDecl": null,
-	"requireTrailingComma": false
+  "preset": "airbnb",
+  "disallowMultipleVarDecl": null,
+  "requireTrailingComma": false,
+  "requireSpacesInAnonymousFunctionExpression": false
 }
