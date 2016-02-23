@@ -2,21 +2,21 @@
   display: flex;
   overflow: hidden;
 
-  &:nth-of-type(odd) {
-    color: $white;
-    background: $primary-color;
-
-    .project-button {
-      @include btn-clear($white);
-    }
-  }
-
-  &:nth-of-type(even) {
+  &:nth-child(even) {
     color: $primary-color;
     background: $white;
 
     .project-button {
-      @include btn-clear($primary-color);
+      @extend .btn-clear--primary;
+    }
+  }
+
+  &:nth-child(odd) {
+    color: $white;
+    background: $primary-color;
+
+    .project-button {
+      @extend .btn-clear--white;
     }
 
     > div:first-child {

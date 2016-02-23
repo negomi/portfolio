@@ -66,26 +66,10 @@
 }
 
 .blog-button {
-  @include btn-solid($primary-color);
+  @extend .btn-solid;
   margin-top: 2rem;
 
   @include tablet-up {
     margin-bottom: 2rem;
-  }
-}
-
-.date {
-  margin-left: 0.3rem;
-  font-size: 0.7rem;
-  color: $asbestos;
-
-  @include tablet {
-    margin-left: 0.4rem;
-    font-size: 0.8rem;
-  }
-
-  @include desktop {
-    margin-left: 0.4rem;
-    font-size: 0.9rem;
   }
 }

@@ -1,9 +1,11 @@
-.btn {
+%btn {
   display: inline-block;
   padding: 0.6rem 1.5rem;
 
   border-radius: 0.4rem;
   font-size: initial;
+  transition: background-color 0.5s;
+  background: transparent;
 
   @include tablet {
     padding: 0.7rem 1.8rem;
@@ -13,5 +15,69 @@
   @include desktop {
     padding: 0.8rem 2rem;
     font-size: 1.2rem;
+  }
+}
+
+.btn-clear--primary {
+  display: inline-block;
+  background: transparent;
+  padding: 0.6rem 1.5rem;
+  border: 4px solid $primary-color;
+  border-radius: 0.4rem;
+
+  color: $primary-color;
+  font-size: initial;
+  transition: background-color 0.5s;
+
+  @include tablet {
+    padding: 0.7rem 1.8rem;
+    font-size: 1.1rem;
+  }
+
+  @include desktop {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    background: transparentize($primary-color, 0.9);
+  }
+}
+
+.btn-clear--white {
+  display: inline-block;
+  background: transparent;
+  padding: 0.6rem 1.5rem;
+  border: 4px solid $white;
+  border-radius: 0.4rem;
+
+  color: $white;
+  font-size: initial;
+  transition: background-color 0.5s;
+
+  @include tablet {
+    padding: 0.7rem 1.8rem;
+    font-size: 1.1rem;
+  }
+
+  @include desktop {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    background: transparentize($white, 0.9);
+  }
+}
+
+.btn-solid {
+  @extend %btn;
+
+  background: $primary-color;
+  border-bottom: 4px solid darken($primary-color, 10%);
+  color: $white;
+
+  &:hover {
+    background: darken($primary-color, 5%);
   }
 }
