@@ -10,7 +10,7 @@ var ghPages = require('gulp-gh-pages');
 
 gulp.task('sass', function() {
   return gulp.src('sass/**/*.scss')
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
@@ -18,7 +18,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('styles', ['fonts'], function() {
+gulp.task('styles', ['fonts', 'sass'], function() {
   return gulp.src([
       'bower_components/normalize.css/normalize.css',
       'bower_components/font-awesome/css/font-awesome.css',
@@ -59,15 +59,14 @@ gulp.task('html', function() {
 gulp.task('watch', function() {
   gulp.watch('index.html', ['html']);
   gulp.watch('scripts/**/*.js', ['scripts']);
-  gulp.watch('sass/**/*.scss', ['sass']);
-  gulp.watch('css/main.css', ['styles']);
+  gulp.watch('sass/**/*.scss', ['styles']);
 });
 
 gulp.task('connect', function() {
   connect.server({ livereload: true });
 });
 
-gulp.task('deploy', ['scripts', 'sass', 'styles'], function() {
+gulp.task('deploy', ['scripts', 'styles'], function() {
   gulp.src([
     'js/all.min.js',
     'css/all.min.css',
@@ -79,4 +78,4 @@ gulp.task('deploy', ['scripts', 'sass', 'styles'], function() {
     .pipe(ghPages());
 });
 
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['connect', 'watch', 'scripts', 'styles']);
