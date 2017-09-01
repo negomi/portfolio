@@ -39,7 +39,7 @@ gulp.task('fonts', function() {
 
 gulp.task('scripts', function() {
   return gulp.src([
-      'bower_components/gsap/src/minified/TweenLite.min.js',
+      'bower_components/tweenlite/TweenLite.min.js',
       'bower_components/gsap/src/minified/easing/EasePack.min.js',
       'scripts/rAF.js',
       'scripts/**/*.js'
