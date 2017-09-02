@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/negomi/portfolio#readme",
   "devDependencies": {
+    "bower": "^1.8.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^3.0.1",
     "gulp-concat": "^2.5.2",
@@ -24,5 +25,9 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.1",
     "gulp-uglify": "^1.2.0"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "gulp"
   }
 }
